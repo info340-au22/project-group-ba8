@@ -1,4 +1,36 @@
 body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: blanchedalmond;
+}
+  
+header {
     font-size: 16px;
-    font-family: sans-serif;
+}
+  
+section {
+    margin: .5rem 0;
+    padding: .5rem;
+    border: 1px solid gray;
+}
+  
+footer {
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, sans-serif;
+    color: darkslategrey;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkslategrey;
+}
+
+p, li {
+    font-family: 'Papyrus', sans-serif;
+    color: darkslategrey;
 }
