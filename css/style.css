@@ -1,0 +1,40 @@
+body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: #ffd8c0;
+    font-size: 16px;
+}
+  
+/* header {
+    font-size: 16px;
+} */
+  
+section {
+    margin: .5rem 0;
+    padding: 2rem;
+    background-color: #004e98;
+}
+  
+/* footer {
+    font-size: 16px;
+} */
+
+h1 {
+    font-family: "Copperplate Gothic Light",'Trebuchet MS', sans-serif;
+    color: #004e98;
+    font-size: 4em;
+}
+
+h2 {
+    font-family: Verdana, Arial, sans-serif;
+    color: #ffd8c0;
+    font-size: 1.5em;
+}
+
+p, li {
+    font-family: Verdana, Arial, sans-serif;
+    color: #ffd8c0;
+    font-size: 1.2em;
+}
