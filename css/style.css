@@ -3,7 +3,7 @@ body {
     margin-bottom: 100px;
     margin-right: 150px;
     margin-left: 80px;
-    background-color: #ffd8c0;
+    background-color: #313638;
     font-size: 16px;
 }
   
@@ -14,7 +14,7 @@ body {
 section {
     margin: .5rem 0;
     padding: 2rem;
-    background-color: #004e98;
+    background-color: #f06543;
 }
   
 /* footer {
@@ -23,18 +23,41 @@ section {
 
 h1 {
     font-family: "Copperplate Gothic Light",'Trebuchet MS', sans-serif;
-    color: #004e98;
+    color: #f06543;
     font-size: 4em;
 }
 
 h2 {
     font-family: Verdana, Arial, sans-serif;
-    color: #ffd8c0;
+    color: #313638;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: Verdana, Arial, sans-serif;
+    color: #313638;
     font-size: 1.5em;
 }
 
 p, li {
     font-family: Verdana, Arial, sans-serif;
-    color: #ffd8c0;
+    color: #313638;
     font-size: 1.2em;
+}
+
+.banner{
+    margin: .5rem 0;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    background-color: #313638;
+}
+
+.links {
+    color: #e0dfd5;
+}
+
+#subsection {
+    margin-top: 2rem;
+    background-color: #f09d51;
 }
