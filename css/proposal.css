@@ -19,25 +19,21 @@ h1 {
     font-size: 4em;
 }
 
-h2 {
+h2, h3, p, li {
     font-family: Verdana, Arial, sans-serif;
     color: #404040;
     font-size: 2em;
 }
 
 h3 {
-    font-family: Verdana, Arial, sans-serif;
-    color: #404040;
     font-size: 1.5em;
 }
 
 p, li {
-    font-family: Verdana, Arial, sans-serif;
-    color: #404040;
     font-size: 1.2em;
 }
 
-.banner{
+header {
     margin: .5rem 0;
     padding: 0.5rem;
     position: sticky;
