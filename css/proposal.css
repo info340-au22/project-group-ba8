@@ -14,7 +14,7 @@ section {
 }
 
 h1 {
-    font-family: "Copperplate Gothic Light",'Trebuchet MS', sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     color: #e5e5e5;
     font-size: 4em;
 }
@@ -42,7 +42,8 @@ header {
 }
 
 .links {
-    color: #4e4e4e;
+    color: #696969;
+    word-wrap: break-word;
 }
 
 .subsection {
