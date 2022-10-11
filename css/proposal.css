@@ -10,12 +10,12 @@ body {
 section {
     margin: .5rem 0;
     padding: 2rem;
-    background-color: #e5e5e5;
+    background-color: #f5dfe5;
 }
 
 h1 {
     font-family: 'Trebuchet MS', sans-serif;
-    color: #e5e5e5;
+    color: #FFD3E7;
     font-size: 4em;
 }
 
@@ -48,5 +48,11 @@ header {
 
 .subsection {
     margin-top: 2rem;
-    background-color: rgb(215, 215, 215);
+    background-color: #f7f0f2;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    margin:auto
 }
