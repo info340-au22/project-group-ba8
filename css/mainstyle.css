@@ -103,8 +103,3 @@ section#copyright a
 section#intro p, li {
   font-size: 1.2em;
 }
-section#intro h2, h3, p, li {
-  font-family: Verdana, Arial, sans-serif;
-  color: #404040;
-  font-size: 2em;
-}
