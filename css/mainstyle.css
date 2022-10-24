@@ -119,6 +119,10 @@ section#intro p, li {
 #introlist{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+h3{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color:green;
+}
 h3 ul{
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
