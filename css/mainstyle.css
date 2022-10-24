@@ -2,7 +2,7 @@
   height: 100%; 
   width: 0; 
   position: fixed; 
-  z-index: 1; /* Stay on top */
+  z-index: 1; 
   top: 0;
   left: 0;
   background-color: rgb(120, 92, 92); 
@@ -10,7 +10,9 @@
   padding-top: 60px; 
   transition: 0.5s; 
 }
-
+.container{
+  display:flex;
+}
 body{
   background-color: rgb(185, 175, 244);
 }
@@ -18,7 +20,8 @@ body{
 h2.maintitle{
   text-align: center;
   font-size: 3rem;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 190px;
 }
 
 .sidebar a {
@@ -63,16 +66,24 @@ h2.maintitle{
 #main {
   transition: margin-left .5s; /* If you want a transition effect */
   padding: 20px;
+  margin: .5rem 0;
+    
+    position: fixed;
+    top: 0;
 }
+div#fixtitle {
+position:fixed;
 
+
+}
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
 
 div#eventbar img{
-  height:280px;
-  width:400px;
+  height:180px;
+  width:250px;
   border-radius: 15px;
 }
 div.mapimg{
@@ -80,8 +91,10 @@ div.mapimg{
   
 }
 img.map{
-  height:800px;
-  width:1000px;
+  /*size:1em;*/
+  height: 500px;
+  width:800px;
+  border-radius: 15px;
 }
 section#copyright
 {
@@ -101,5 +114,14 @@ section#copyright a
   color: white;
 }
 section#intro p, li {
-  font-size: 1.2em;
+  font-size: 12px;
+}
+#introlist{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h3 ul{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+flexbox:nth-child(3){
+  max-width: 200px;
 }

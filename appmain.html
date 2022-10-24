@@ -11,34 +11,42 @@
 </head>
 
 <body>
-    <section id="pagetitle">
-        <h2 class="maintitle">EventMap</h2>
+    <div class="container">
+        <section id="pagetitle" class="flexbox">
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">&#9776; Edit Events</button>
 
-    </section>
-    <section id="mapchunk">
-        <div id="eventbar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#"><img src="img/add item.jpg"></a>
-            <a href="#"><img src="img/add item.jpg"></a>
-            <a href="#"><img src="img/add item.jpg"></a>
-            <a href="#"><img src="img/add item.jpg"></a>
+            </div>
+
+
+        </section>
+        <div>
+            <h2 class="maintitle">EventMap</h2>
         </div>
+        <section id="mapchunk" class="flexbox">
 
-        <div id="main">
-            <button class="openbtn" onclick="openNav()">&#9776; Edit Events</button>
-            
+            <div id="eventbar" class="sidebar">
+
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#"><img src="img/add item.jpg" alt="new event"></a>
+                <a href="#"><img src="img/add item.jpg" alt="new event"></a>
+                <a href="#"><img src="img/add item.jpg" alt="new event"></a>
+                <a href="#"><img src="img/add item.jpg" alt="new event"></a>
+            </div>
+
+
 
             <div class="mapimg">
-                <img class="map" src="img/map.jpg">
+                <img class="map" src="img/map.jpg" alt="map">
             </div>
-        </div>
-        <script src="js/scriptmain.js"></script>
-        
-    </section>
-    <section id="intro">
-        
-        <h3 style="text-align:center">Designated Functions</h3>
-            <ul>
+
+            <script src="js/scriptmain.js"></script>
+
+        </section>
+        <section id="intro" class="flexbox">
+
+            <h3 style="text-align:center">Designated Functions</h3>
+            <ul id="introlist">
                 <li>Import multiple maps or create one. Maps can be public and edited by anyone</li>
                 <li>Mark, edit, and add descriptions of places on maps</li>
                 <li>Freely add public or private events and mark them on maps, create personalized event cards</li>
@@ -48,15 +56,15 @@
                 <li>Search through or filter events</li>
                 <li>Share photos and other details using the event cards</li>
             </ul>
-      
-    </section>
-    
-    <section id="copyright">
-        <p>Contacts:</p>
-        <p><a href="mailto:dannyyue@uw.edu"><span class="material-icons">email:</span> dannyyue@uw.edu</a></p>
-      <p><a href="tel:555-123-4567"><span class="material-icons">phone:</span> 555-123-4567</a></p>
-      <p style="font-size:12px ;">&copy; GROUP BA 8 2022</p>
-    </section>
+
+        </section>
+    </div>
+        <section id="copyright">
+            <p>Contacts:</p>
+            <p><a href="mailto:dannyyue@uw.edu"><span class="material-icons">email:</span> dannyyue@uw.edu</a></p>
+            <p><a href="tel:555-123-4567"><span class="material-icons">phone:</span> 555-123-4567</a></p>
+            <p style="font-size:12px ;">&copy; GROUP BA 8 2022</p>
+        </section>
     
 </body>
 
