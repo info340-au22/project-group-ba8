@@ -2,3 +2,11 @@
 html {
     font-family: sans-serif;
 }
+
+.homepage {
+    background-image: url(../img/beaver.jpg);
+}
+
+.extra-height {
+    height: 70%;
+}

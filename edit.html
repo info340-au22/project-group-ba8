@@ -9,28 +9,32 @@
   <link rel="stylesheet" href="css/edit.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm bg-info">
-            <div class="container-fluid">
-                <ul class="navbar-nav p-2">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">
-                            Events Map
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="edit.html">
-                            Create Events
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.html">
-                            My Profile
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <nav class="navbar navbar-expand bg-info d-none d-lg-block">
+        <div class="container-fluid">
+            <ul class="navbar-nav p-2">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">
+                        Events Map
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="edit.html">
+                        Create Events
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">
+                        My Profile
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="container-fluid bg-info text-white py-5 mb-3">
+        <div class="container">
+          <h1>Add an event</h1>
+        </div>
     </header>
 
     <main class="mx-5 mt-5">
@@ -54,7 +58,7 @@
                         <label for="location-input" class="form-label">Location:</label>
                         <div class="input-group">
                             <input type="text" class="form-control" id="location-input" placeholder="Where is the event..">
-                            <button class="btn btn-outline-secondary" type="button"><i class="fa fa-map-pin" aria-label="map"></i></button>
+                            <button class="btn btn-outline-secondary" type="button"><i class="fa fa-map-marker" aria-label="map"></i></button>
                         </div>
                     </div>
 
@@ -85,15 +89,18 @@
                 </div>
 
                 <div class="d-none d-xl-block col-xl-5">
-                    <label class="form-label">Preview:</label>
+                    
                     <div class="container extra-height">
                         <div class="row align-items-center extra-height">
-                            <div class="card col">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <h2 class="card-title">Event name</h2>
-                                        <p class="card-text">Date and time</p>
-                                        <a href="#" class="btn btn-dark">Get direction</a>
+                            <div class="col">
+                                <label class="form-label">Preview:</label>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <h2 class="card-title">Event name</h2>
+                                            <p class="card-text">Date and time</p>
+                                            <a href="#" class="btn btn-dark">Get direction</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -103,5 +110,25 @@
             </div>
         </div>
     </main>
+
+    <nav class="nav-bar bg-dark fixed-bottom d-lg-none p-2 border-top-white">
+        <ul class="nav justify-content-evenly">
+            <li class="nav-item">
+                <a class="nav-link text-light fs-1" href="edit.html">
+                    <i class="fa fa-pencil-square-o" aria-label="map"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light fs-1" aria-current="page" href="index.html">
+                    <i class="fa fa-home" aria-label="homepage"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light fs-1" href="profile.html">
+                    <i class="fa fa-book" aria-label="map"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>
