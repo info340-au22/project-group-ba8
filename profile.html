@@ -4,70 +4,125 @@
     <meta charset="utf-8">
     <meta name="author" content="Yezhen Chen, Vince Qian, Chaowei Xiao, Danny Yue">
     <meta name="description" content="Events Map">
-    <title>Profile | Events Map</title>
+    <title>My Profile | Events Map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
-    <header class="container-fluid sticky-top text-white bg-dark py-2">
-        <div class="row">
-            <div class="col"><h1>Profile</h1></div>
-        </div>
-        <div class="row">
-            <div class="col"><img src="img/beaver.jpg" alt="my avatar"></div>
-            <div class="col"></div><p>Mr. Beaver</p></div>
-        </div>
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <ul class="navbar-nav p-2">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="index.html">
+                        Events Map
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="edit.html">
+                        Create Events
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">
+                        My Profile
+                      </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <div class="container-fluid">
+    <main class="mx-5">
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <h1 class="mb-5">Good Morning, Mr. Beaver</h1>
+            </div>
             <div class="row">
 
                 <!-- personal info card -->
-                <div class="col-4">
-                    <div class="card">
-                        <h2>Personal Info</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac justo tortor. Duis sit amet urna eu dolor suscipit fringilla sit amet eu nisi. Quisque lacus eros, aliquam ac justo quis, interdum viverra dolor. Vestibulum commodo ligula at tortor vehicula pharetra. Donec pretium odio nibh, a fringilla arcu scelerisque id. In ultricies faucibus sapien ac varius. Aenean venenatis urna nec odio fringilla, elementum eleifend sem congue.
-                        </p>
+                <div class="col-sm-12 col-lg-4 card-col">
+                    <div class="card my-2 p-3 rounded-0">
+                        <div class="card-body">
+                            <h2>Personal Info</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac justo tortor. Duis sit amet urna eu dolor suscipit fringilla sit amet eu nisi. Quisque lacus eros, aliquam ac justo quis, interdum viverra dolor. Vestibulum commodo ligula at tortor vehicula pharetra. Donec pretium odio nibh, a fringilla arcu scelerisque id. In ultricies faucibus sapien ac varius. Aenean venenatis urna nec odio fringilla, elementum eleifend sem congue.
+                            </p>
+                        </div>
                     </div>
                 </div>
         
                 <!-- notes card -->
-                <div class="col-4">
-                    <div class="card">
-                        <h2>Notes</h2>
-                        <div>
-                            <h3>Lorem</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac justo tortor. Duis sit amet urna eu dolor suscipit fringilla sit amet eu nisi.
-                            </p>
+                <div class="col-sm-12 col-lg-4 card-col">
+                    <div class="card my-2 p-3 rounded-0">
+                        <div class="card-body">
+                            <h2>Notes</h2>
+                            <div class="container">
+    
+                                <div class="row">
+                                    <div class="card my-2 p-3 rounded-0">
+                                        <h3>Lorem</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac justo tortor. Duis sit amet urna eu dolor suscipit fringilla sit amet eu nisi.
+                                        </p>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="card my-2 p-3 rounded-0">
+                                        <h3>Quisque</h3>
+                                        <p>
+                                            Quisque id pretium eros. In mauris metus, euismod eu nisl a, viverra euismod libero. Nam id orci ac eros consequat vulputate. Pellentesque et rhoncus nulla.
+                                        </p>
+                                    </div>
+                                </div>
+    
+                                <div class="row-2">
+                                    <button type="button" class="btn btn-primary my-2">
+                                        Add Notes
+                                    </button>
+                                </div>
+    
+                            </div>
                         </div>
-                        <div>
-                            <h3>Quisque</h3>
-                            <p>
-                                Quisque id pretium eros. In mauris metus, euismod eu nisl a, viverra euismod libero. Nam id orci ac eros consequat vulputate. Pellentesque et rhoncus nulla.
-                            </p>
-                        </div>
-                        <button>Add Notes</button>
                     </div>
                 </div>
         
                 <!-- schedule card -->
-                <div class="col-4">
-                    <div class="card">
-                        <h2>Schedule</h2>
-                        <div class="card">
-                            <h3>Summer 2022</h3>
+                <div class="col-sm-12 col-lg-4 card-col">
+                    <div class="card my-2 p-3 rounded-0">
+                        <div class="card-body">
+                            <h2>Schedule</h2>
+                            <div class="container">
+    
+                                <div class="row">
+                                    <div class="card my-2 p-3 rounded-0">
+                                        <h3>Summer 2022</h3>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="card my-2 p-3 rounded-0">
+                                        <h3>Weekend with Marco</h3>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="card my-2 p-3 rounded-0">
+                                        <h3>Aurora journey in Alaska</h3>
+                                    </div>
+                                </div>
+    
+                                <div class="row-2">
+                                    <button type="button" class="btn btn-primary my-2">
+                                        Create New Schedule
+                                    </button>
+                                </div>
+    
+                            </div>
                         </div>
-                        <div class="card">
-                            <h3>Weekend with Marco</h3>
-                        </div>
-                        <div class="card">
-                            <h3>Aurora journey in Alaska</h3>
-                        </div>
-                        <button>Create New Schedule</button>
+
                     </div>
                 </div>
             </div>

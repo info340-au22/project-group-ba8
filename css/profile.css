@@ -1,7 +1,47 @@
+h2 {
+    font-weight: bold;
+}
+
 body {
     background-color: rgb(255, 158, 106);
 }
 
 header img {
-    max-width: 10vw;
+    width: 10vw;
+}
+
+button {
+    flex: 1;
+    position: relative;
+}
+
+.card .card {
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .23), 2px 2px 5px rgba(0, 0, 0, .16);
+}
+
+.main-page {
+    font-weight: bold;
+}
+
+.card-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-col > .card {
+    flex: 1;
+}
+
+.row-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.card .card:hover {
+    background-color: rgba(255, 158, 106, .2);
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid black;
 }
