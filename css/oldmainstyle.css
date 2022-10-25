@@ -1,0 +1,131 @@
+.sidebar {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  background-color: rgb(120, 92, 92); 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+}
+.container{
+  display:flex;
+}
+body{
+  background-color: rgb(185, 175, 244);
+}
+
+h2.maintitle{
+  text-align: center;
+  font-size: 3rem;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 190px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  margin-top: 120px 120px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color:rgb(111, 219, 48);
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(103, 203, 36);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: rgb(33, 236, 240);
+}
+
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+  margin: .5rem 0;
+    
+    position: fixed;
+    top: 0;
+}
+div#fixtitle {
+position:fixed;
+
+
+}
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+div#eventbar img{
+  height:180px;
+  width:250px;
+  border-radius: 15px;
+}
+div.mapimg{
+  text-align: center;
+  
+}
+img.map{
+  /*size:1em;*/
+  height: 500px;
+  width:800px;
+  border-radius: 15px;
+}
+section#copyright
+{
+  background-color: rgb(46, 14, 14);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  color: white;
+}
+
+section#copyright a
+{
+  padding: 8px 8px 8px 32px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 120px 120px;
+  text-decoration:underline;
+  font-size: 15px;
+  color: white;
+}
+section#intro p, li {
+  font-size: 12px;
+}
+#introlist{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h3{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color:green;
+}
+h3 ul{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+flexbox:nth-child(3){
+  max-width: 200px;
+}
