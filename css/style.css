@@ -17,9 +17,9 @@ img {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    padding: 1.2em;
+    padding-bottom: 4em;
 }
 
 footer > p {
@@ -171,6 +171,10 @@ footer h3 {
 
 #contacts p {
     margin: 0;
+}
+
+#contacts div {
+    margin-bottom: 1em;
 }
 
 #index-img {
