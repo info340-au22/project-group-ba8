@@ -3,108 +3,85 @@
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Yezhen Chen, Vince Qian, Chaowei Xiao, Danny Yue">
-    <meta name="description" content="Events Map">
+    <meta name="description" content="Post">
     <title>Events Map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="homepage">
-    <nav class="navbar navbar-expand bg-info d-none d-lg-block">
-        <div class="container-fluid">
-            <ul class="navbar-nav p-2">
-                <li class="nav-item">
-                    <a class="nav-link  active" aria-current="page" href="index.html">
-                        Events Map
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="edit.html">
-                        Create Events
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="profile.html">
-                        My Profile
-                    </a>
-                </li>
-            </ul>
+
+<body>
+    <div class="morning-event">
+        <a href="#"><span class="material-icons md-36" aria-label="Home">location_on</span></a>
+        <div class="col-xl-3 col-md-6 d-flex">
+            <div class="card-morning mb-4">
+                <div class="card-body">
+                    <div class="col-sm-auto col-xl-12">
+                        <img class="img pb-3" src="img/tea.jpeg" alt="dog park event">
+                    </div>
+                    <div class="col-sm">
+                        <h2 class="card-title">Morning Tea!</h2>
+                        <p class="card-text">Enjoying traditional Cantonese morning tea with friends with all my deadlines cleared lol</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
-
-    <div class="container mr-0">
-        <div class="row justify-content-around">
-            <div class="col-lg-9">
-            </div>
-            <div class="col-lg-3">
-                <div class="card  mt-3">
-                    <div class="card-body">
-                        <div class="row">
-                            <h2 class="card-title">Event name</h2>
-                            <p class="card-text">Date and time</p>
-                            <a href="#" class="btn btn-dark">Get direction</a>
-                        </div>
+    </div>
+    <div class="afternoon-event">
+        <a href="#"><span class="material-icons" aria-label="Home">location_on</span></a>
+        <div class="col-xl-3 col-md-6 d-flex">
+            <div class="card-afternoon mb-4">
+                <div class="card-body">
+                    <div class="col-sm-auto col-xl-12">
+                        <img class="img pb-3" src="img/dogs.jpeg" alt="dog park event">
                     </div>
-                </div>
-
-                <div class="card mt-3 d-none d-lg-block">
-                    <div class="card-body">
-                        <div class="row">
-                            <h2 class="card-title">Event name</h2>
-                            <p class="card-text">Date and time</p>
-                            <a href="#" class="btn btn-dark">Get direction</a>
-                        </div>
+                    <div class="col-sm">
+                        <h2 class="card-title">Dog park time!</h2>
+                        <p class="card-text">Taking Jax to his favorite dog park for a afternoon. This week has been a long week and finally I can have some time with him.</p>
                     </div>
-                </div>
-
-                <div class="card mt-3 d-none d-lg-block">
-                    <div class="card-body">
-                        <div class="row">
-                            <h2 class="card-title">Event name</h2>
-                            <p class="card-text">Date and time</p>
-                            <a href="#" class="btn btn-dark">Get direction</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mt-3 justify-content-around">
-                    <button type="button" class="btn btn-dark btn-lg col-5 d-none d-lg-block ">Public</button>
-                    <a class="btn btn-primary btn-lg col-5 d-none d-lg-block" href="edit.html">
-                        Add
-                    </a>            
                 </div>
             </div>
-
-            
+        </div>
+    </div>
+    <div class="night-event">
+        <a href="#"><span class="material-icons" aria-label="Home">location_on</span></a>
+        <div class="col-xl-3 col-md-6 d-flex">
+            <div class="card-night mb-4">
+                <div class="card-body">
+                    <div class="col-sm-auto col-xl-12">
+                        <img class="img pb-3" src="img/fireworks.jpg" alt="dog park event">
+                    </div>
+                    <div class="col-sm">
+                        <h2 class="card-title">fireworks!</h2>
+                        <p class="card-text">Seeing pretty fireworks with my roommates. Remind them to wear masks, there would be a huge crowd.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <nav class="nav-bar bg-dark fixed-bottom d-lg-none p-2 border-top-white">
-        <ul class="nav justify-content-evenly">
-            <li class="nav-item">
-                <a class="nav-link text-light fs-1" href="edit.html">
-                    <i class="fa fa-pencil-square-o" aria-label="map"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light fs-1" aria-current="page" href="index.html">
-                    <i class="fa fa-home" aria-label="homepage"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light fs-1" href="profile.html">
-                    <i class="fa fa-book" aria-label="map"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <section id="copyright">
-        <p>Contacts:</p>
-        <p><a href="mailto:dannyyue@uw.edu"><span class="material-icons">email:</span> dannyyue@uw.edu</a></p>
-        <p><a href="tel:555-123-4567"><span class="material-icons">phone:</span> 555-123-4567</a></p>
-        <p style="font-size:12px ;">&copy; GROUP BA 8 2022</p>
-    </section>
+
+
+
+
+
+<!-- 
+    <div class="card-morning">
+        <main>
+            <div class="card-body">
+               
+                <div class="post-image">
+                    <img class="img " src="img/dogs.jpeg" alt="dog park event">
+                </div>
+                <h1 class="card-title">Dog park time!</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, laborum.</p>                        
+            </div>
+        </main>
+    </div> -->
 </body>
 </html>
