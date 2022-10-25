@@ -6,39 +6,42 @@
         <meta name="description" content="Events Map">
         <title>My Profile | Events Map</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="stylesheet" href="css/profile.css">
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-sm bg-info">
-                <div class="container-fluid">
-                    <ul class="navbar-nav p-2">
-                        <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">
-                            Events Map
-                        </a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="edit.html">
-                            Create Events
-                        </a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link active" href="#">
-                            My Profile
-                        </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+        <nav class="navbar navbar-expand bg-info d-none d-lg-block">
+            <div class="container-fluid">
+                <ul class="navbar-nav p-2">
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">
+                        Events Map
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="edit.html">
+                        Create Events
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        My Profile
+                    </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <header class="container-fluid bg-info text-white py-5 mb-3">
+            <div class="container">
+                <h1>Good Morning, Mr. Beaver</h1>
+            </div>
         </header>
 
         <main class="mx-5">
             <div class="container-fluid mt-5">
-                <div class="row">
-                    <h1 class="mb-5">Good Morning, Mr. Beaver</h1>
-                </div>
+                
                 <div class="row">
 
                     <!-- personal info card -->
@@ -136,6 +139,26 @@
                 </div>
             </div>
         </main>
+
+        <nav class="nav-bar bg-dark d-lg-none p-2 border-top-white sticky-bottom">
+            <ul class="nav justify-content-evenly">
+                <li class="nav-item">
+                    <a class="nav-link text-light fs-1" href="edit.html">
+                        <i class="fa fa-pencil-square-o" aria-label="map"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light fs-1" aria-current="page" href="index.html">
+                        <i class="fa fa-home" aria-label="homepage"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light fs-1" href="profile.html">
+                        <i class="fa fa-book" aria-label="map"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </body>
