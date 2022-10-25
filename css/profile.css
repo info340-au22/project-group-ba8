@@ -2,9 +2,9 @@ h2 {
     font-weight: bold;
 }
 
-body {
+/* body {
     background-color: rgb(255, 158, 106);
-}
+} */
 
 header img {
     width: 10vw;
@@ -15,7 +15,7 @@ button {
     position: relative;
 }
 
-.card .card {
+.card {
     border: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .23), 2px 2px 5px rgba(0, 0, 0, .16);
 }
@@ -39,7 +39,8 @@ button {
 }
 
 .card .card:hover {
-    background-color: rgba(255, 158, 106, .2);
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 .nav-item:hover {
