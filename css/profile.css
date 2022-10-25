@@ -15,9 +15,17 @@ button {
     position: relative;
 }
 
+img {
+    max-width: 10vw;
+}
+
 .card {
     border: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .23), 2px 2px 5px rgba(0, 0, 0, .16);
+}
+
+.date {
+    font-weight: bold;
 }
 
 .main-page {
