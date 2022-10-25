@@ -15,6 +15,10 @@ img {
     max-width: 10vw;
 }
 
+.input-group button {
+    max-width: 50px;
+}
+
 .card {
     border: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .23), 2px 2px 5px rgba(0, 0, 0, .16);
