@@ -1,5 +1,6 @@
 html {
     font-family: sans-serif;
+    height: 100%;
 }
 
 h2 {
@@ -13,6 +14,32 @@ button {
 
 img {
     max-width: 10vw;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 1.2em;
+}
+
+footer > p {
+    font-size: .5em;
+    margin-bottom: 0;
+}
+
+footer h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+footer h2 {
+    font-size: 1.5em;
+    font-weight: unset;
+}
+
+footer h3 {
+    font-size: 1.2em;
 }
 
 .input-group button {
@@ -62,20 +89,99 @@ img {
 .extra-height {
     height: 90%;
 }
-section#copyright
-{
-  background-color: rgb(46, 14, 14);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 25px;
-  color: white;
+
+.morning-event .material-icons {
+    color: orange;
+    left: 1000px;
+    top: 300px;
 }
 
-section#copyright a
-{
-  padding: 8px 8px 8px 32px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-top: 120px 120px;
-  text-decoration:underline;
-  font-size: 15px;
-  color: white;
+.afternoon-event .material-icons{
+    left: 1370px;
+    top: 200px;
+    color: #ff5400;
+}
+
+.night-event .material-icons{
+    left: 300px;
+    top: 730px;
+    color: #4400ff;
+    
+}
+
+.material-icons {
+    size: 24px;
+    position: absolute;
+}
+
+.fill-flex {
+    display: flex;
+    flex: 1;
+}
+
+.card-night .card-body {
+    border-radius: 25px;
+    background-color: #2d0d87;
+}
+
+.card-morning .card-body {
+    border-radius: 25px;
+    background-color: rgb(255, 145, 0);
+}
+
+.card-afternoon .card-body {
+    border-radius: 25px;
+    background-color: #d04900;
+}
+
+.card-text, .card-title {
+    font-family:'Fuzzy Bubbles', cursive;
+    color: white;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.6rem;
+    padding-right: 0.5rem;
+}
+
+.card-title {
+    font-size: 2.5rem;
+    font-style: bold;
+}
+
+.morning-event {
+    padding-left: 1030px;
+    padding-top: 320px;
+}
+
+.afternoon-event {
+    padding-left: 1420px;
+    margin-top: -620px;
+}
+
+.night-event {
+    padding-left: 340px;
+    padding-bottom: -120px;
+}
+
+#contacts {
+    flex: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1em;
+}
+
+#contacts p {
+    margin: 0;
+}
+
+#index-img {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 300px;
+    border-radius: 25px;
+}
+
+#index-body {
+    background-image: url('../img/snazzy-image.png');
+    background-repeat: no-repeat;
 }
