@@ -76,10 +76,6 @@ footer h3 {
     border-bottom: 2px solid black;
 }
 
-.homepage {
-    background-image: url(../img/school-map.png);
-}
-
 .extra-height {
     height: 90%;
 }
@@ -180,6 +176,6 @@ footer h3 {
 }
 
 .index-body {
-    background-image: url('../img/snazzy-image.png');
+    background-image: url('../public/img/snazzy-image.png');
     background-repeat: no-repeat;
 }
