@@ -7,23 +7,27 @@ export default function Navbar(props) {
     return (
         <nav className="navbar navbar-expand bg-info d-none d-lg-block" id='navbar'>
             <div className="container-fluid">
-                <ul className="navbar-nav p-2">
+                <ul className="navbar-nav p-1">
                     <li >
                        <img className="navicon" src="img/otter.png" />
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link active" aria-current="page" to="/home">
-                            Events Map
+                           <p className = "navtext">Events Map</p> 
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/plan">
+<<<<<<< HEAD
+                        <p className = "navtext">  Create Events</p> 
+=======
                             Create Events
+>>>>>>> fd8ea09242a9caa69fa3f68563298c05b0f4980f
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/profile">
-                            My Profile
+                        <p className = "navtext">  My Profile</p> 
                         </Link>
                     </li>
                     
