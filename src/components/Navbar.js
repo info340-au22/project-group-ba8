@@ -12,7 +12,7 @@ export default function Navbar(props) {
                        <img className="navicon" src="img/otter.png" />
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" aria-current="page" to="/home">
+                        <Link className="nav-link" aria-current="page" to="/home">
                            <p className = "navtext">Events Map</p> 
                         </Link>
                     </li>

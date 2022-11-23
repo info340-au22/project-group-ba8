@@ -12,7 +12,7 @@ export default function Form(props) {
                 <div className="col-md-3 align-self-end">
                     <div className="form-check form-switch">
                         <input className="form-check-input" type="checkbox" role="switch" id="privacy-check" />
-                        <label className="form-check-label" for="privacy-check">Make it public</label>
+                        <label className="form-check-label" htmlFor="privacy-check">Make it public</label>
                     </div>
                 </div>
 
