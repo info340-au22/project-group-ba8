@@ -1,6 +1,6 @@
 import React from "react"; //import React library
 import {Link} from 'react-router-dom'
-const tabs = ["Home", "Plan", "Profile"];
+
 
 export default function Navbar(props) {
 
