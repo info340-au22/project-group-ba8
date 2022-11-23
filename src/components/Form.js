@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Form(props) {
     return(
-        <div className="col-xl-12 p-5">
+        <div className="col-xl-8">
             <form className="row g-3">
                 <div className="col-md-9">
                     <label for="event-input" className="form-label">Event:</label>
@@ -44,8 +44,8 @@ export default function Form(props) {
                     <input type="file" className="form-control" id="background-image" />
                 </div>
 
-                <div className="col-12">
-                    <button type="submit" className="btn btn-dark">Submit</button>
+                <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                    <button className="btn btn-dark" type="submit">Add it to your plan!</button>
                 </div>
             </form>
         </div>

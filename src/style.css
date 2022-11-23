@@ -209,3 +209,9 @@ nav {
 img.avatar {
     border-radius: 50%;
 }
+
+/*form style*/
+form label, form .btn{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
