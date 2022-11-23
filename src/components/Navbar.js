@@ -18,21 +18,19 @@ export default function Navbar(props) {
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/plan">
-                        <p className = "navtext">  Create Events</p> 
+                        <p className = "navtext">Plan Events</p> 
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/profile">
-                        <p className = "navtext">  My Profile</p> 
+                        <p className = "navtext">My Profile</p> 
                         </Link>
                     </li>
-                    
                 </ul>
             </div>
         </nav>)
 }
-export function navBot(props)
-{
+export function navBot(props) {
    return (
     <nav className="nav-bar bg-dark fixed-bottom d-lg-none p-4 border-top-white">
         <ul className="nav justify-content-evenly">
@@ -53,8 +51,5 @@ export function navBot(props)
             </li>
         </ul>
     </nav>
-
-
-
    )
 }

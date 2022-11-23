@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar.js';
+import Navbar, {navBot} from './Navbar.js';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Home.js';
 import Plan from './Plan.js';
 import Profile from './Profile.js';
-import {navBot} from './Navbar.js';
-export default function App(props) {
 
-    const [currentTab, setCurrentTab] = useState('home');
-    function changeTabCallbk(tabName) {
-        setCurrentTab(tabName);
-    }
+export default function App(props) {
 
     return (
         <div>
-            <Navbar changeTabCallbk={changeTabCallbk} />
+            <Navbar />
             <Routes>
                 <Route index element={<Home /> }/>
                 <Route path='/home' element={<Home /> }/>
