@@ -8,7 +8,7 @@ export default function Navbar(props) {
         <nav className="navbar navbar-expand bg-info d-lg-block" id='navbar'>
             <div className="container-fluid">
                 <ul className="navbar-nav p-1">
-                    <li >
+                    <li className = "d-none d-sm-block">
                        <img className="navicon" src="img/otterlarger.png" />
                     </li>
                     <li className="nav-item">
