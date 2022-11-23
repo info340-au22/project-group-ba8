@@ -186,11 +186,11 @@ nav {
     border-radius: 25px;
 }
 
-.index-body {
+/* .index-body {
     background-image: url('../public/img/snazzy-image.png');
     background-repeat: no-repeat;
     height: 100vh;
-}
+} */
 .navicon {
     height:100px;
     width:100px;
