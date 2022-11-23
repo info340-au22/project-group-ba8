@@ -5,6 +5,7 @@ import Home from './Home.js';
 import Plan from './Plan.js';
 import Profile from './Profile.js';
 import Footer from './Footer.js';
+import POST_DATA from '../data/postData.json';
 
 export default function App(props) {
 
@@ -12,8 +13,8 @@ export default function App(props) {
         <div>
             <Navbar />
             <Routes>
-                <Route index element={<Home /> }/>
-                <Route path='/home' element={<Home /> }/>
+                <Route index element={<Home postData={POST_DATA} /> }/>
+                <Route path='/home' element={<Home postData={POST_DATA} /> }/>
                 <Route path='/plan' element={<Plan />}/>
                 <Route path='/profile' element={<Profile />}/>
             </Routes>
