@@ -9,7 +9,7 @@ export default function Navbar(props) {
             <div className="container-fluid">
                 <ul className="navbar-nav p-1">
                     <li >
-                       <img className="navicon" src="img/otter.png" />
+                       <img className="navicon" src="img/otterlarger.png" />
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" aria-current="page" to="/home">
