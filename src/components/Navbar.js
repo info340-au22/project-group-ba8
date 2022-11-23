@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 export default function Navbar(props) {
 
     return (
-        <nav className="navbar navbar-expand bg-info d-none d-lg-block" id='navbar'>
+        <nav className="navbar navbar-expand bg-info d-lg-block" id='navbar'>
             <div className="container-fluid">
                 <ul className="navbar-nav p-1">
                     <li >
