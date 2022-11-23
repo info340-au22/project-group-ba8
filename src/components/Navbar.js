@@ -18,11 +18,7 @@ export default function Navbar(props) {
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/plan">
-<<<<<<< HEAD
                         <p className = "navtext">  Create Events</p> 
-=======
-                            Create Events
->>>>>>> fd8ea09242a9caa69fa3f68563298c05b0f4980f
                         </Link>
                     </li>
                     <li className="nav-item">
