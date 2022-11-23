@@ -179,3 +179,8 @@ footer h3 {
     background-image: url('../public/img/snazzy-image.png');
     background-repeat: no-repeat;
 }
+.navicon {
+    height:50px;
+    width:50px;
+    
+}
