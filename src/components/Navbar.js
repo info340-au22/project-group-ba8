@@ -17,7 +17,7 @@ export default function Navbar(props) {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="edit.html">
+                        <Link className="nav-link" to="/plan">
                             Create Events
                         </Link>
                     </li>
