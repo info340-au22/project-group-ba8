@@ -17,8 +17,9 @@ export default function App(props) {
             <Navbar changeTabCallbk={changeTabCallbk} />
             <Routes>
                 <Route index element={<Home /> }/>
-                <Route path='/Plan' element={<Plan />}/>
-                <Route path='/Profile' element={<Profile />}/>
+                <Route path='/home' element={<Home /> }/>
+                <Route path='/plan' element={<Plan />}/>
+                <Route path='/profile' element={<Profile />}/>
             </Routes>
 
         </div>
