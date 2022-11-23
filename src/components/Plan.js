@@ -14,12 +14,11 @@ export default function Plan(props) {
             <div className="row">
                 <Form getFormCallback={getForm}/>
                 <div className="d-none d-xl-block col-xl-4">
-                    <h1>{eventObj.name}</h1>
-                    <h1>{eventObj.privacy}</h1>
-                    <h1>{eventObj.location}</h1>
-                    <h1>{eventObj.date}</h1>
-                    <h1>{eventObj.time}</h1>
-                    <h1>{eventObj.intro}</h1>
+                    <h1>Event: {eventObj.name}</h1>
+                    <h1>Location: {eventObj.location}</h1>
+                    <h1>Date: {eventObj.date}</h1>
+                    <h1>Time: {eventObj.time}</h1>
+                    <h1>Intro: {eventObj.intro}</h1>
                 </div>
             </div>
         </div>

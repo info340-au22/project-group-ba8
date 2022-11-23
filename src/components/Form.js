@@ -10,24 +10,30 @@ export default function Form(props) {
 
     const handleName = (event) => {
         setName(event.target.value);
+        props.getFormCallback({name,privacy,location,date,time,intro});
     }
 
     const handlePrivacy = (event) => {
         setPrivacy(event.target.checked);
+        props.getFormCallback({name,privacy,location,date,time,intro});
     }
 
     const handleLocation = (event) => {
         setLocation(event.target.value);
+        props.getFormCallback({name,privacy,location,date,time,intro});
     }
     const handleDate = (event) => {
         setDate(event.target.value);
+        props.getFormCallback({name,privacy,location,date,time,intro});
     }
     const handleTime = (event) => {
         setTime(event.target.value);
+        props.getFormCallback({name,privacy,location,date,time,intro});
     }
 
     const handleIntro = (event) => {
         setIntro(event.target.value);
+        props.getFormCallback({name,privacy,location,date,time,intro});
     }
 
     const handleSubmit = (event) => {
