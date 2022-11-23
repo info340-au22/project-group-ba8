@@ -16,6 +16,11 @@ img {
     max-width: 10vw;
 }
 
+footer {
+    background-image: url('../public/img/footersmaller.png');
+    background-repeat: no-repeat;
+}
+
 footer > p {
     font-size: .5em;
     margin-bottom: 0;
@@ -78,6 +83,7 @@ footer h3 {
 
 nav {
     background-image: url('../public/img/navsmaller.png');
+    background-repeat: no-repeat;
     font-weight: bold;
 }
 
