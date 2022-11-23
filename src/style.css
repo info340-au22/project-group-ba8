@@ -178,6 +178,7 @@ footer h3 {
 .index-body {
     background-image: url('../public/img/snazzy-image.png');
     background-repeat: no-repeat;
+    height: 100vh;
 }
 .navicon {
     height:100px;
