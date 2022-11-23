@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Form(props) {
     return(
-        <div className="col-xl-7">
+        <div className="col-xl-12 p-5">
             <form className="row g-3">
                 <div className="col-md-9">
                     <label for="event-input" className="form-label">Event:</label>
