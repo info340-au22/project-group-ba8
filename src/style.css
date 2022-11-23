@@ -76,6 +76,11 @@ footer h3 {
     border-bottom: 2px solid black;
 }
 
+nav {
+    background-image: url('../public/img/navsmaller.png');
+
+}
+
 .extra-height {
     height: 90%;
 }
