@@ -3,7 +3,7 @@ import Form from "./Form";
 import EventCard from "./EventCard";
 
 export default function Plan(props) {
-    const [eventObj,setEventObj] = useState({title:'',timestampStart:'',timestampEnd:'',location:'',isSaved:false});
+    const [eventObj,setEventObj] = useState({title:'',date:'',timestampEnd:'',location:'',isSaved:false});
 
     const getForm = (formObj) => {
         setEventObj(formObj);

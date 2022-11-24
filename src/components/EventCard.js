@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 export default function EventCard(props) {
     const evtObj = props.evtObj;
-    //console.log(props);
     const cardTitle = evtObj.title;
     const isSaved = evtObj.isSaved;
     function titleCase(str) {
@@ -28,6 +27,7 @@ export default function EventCard(props) {
                     <h2 className='event-title'>{titleCase(evtObj.title)}</h2>
                     <img className='event-img' src={'./img/otterlarger.png'}></img>
                     <p className='event-detail'>{evtObj.detail}</p>
+                    <p className='event-date'>{"Date: "+evtObj.date}</p>
                     <p className='event-time'>{"Time: "+evtObj.timestampStart+" ~ "+evtObj.timestampEnd}</p>
                     <p className='event-location'>{"Location: "+evtObj.location}</p>
                     <button className={'btn '+(isSaved ? 'btn-danger' : 'btn-primary')} onClick={handleClick}>{isSaved ? "Remove" : "Save"}</button>
