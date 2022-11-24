@@ -23,7 +23,6 @@ footer {
 
 footer > p {
     font-size: .5em;
-    margin-bottom: 0;
 }
 
 footer h1 {
@@ -84,6 +83,7 @@ footer h3 {
 nav {
     background-image: url('../public/img/navsmaller.png');
     font-weight: bold;
+    height: 110px;
 }
 
 .extra-height {
