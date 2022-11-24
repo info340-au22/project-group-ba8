@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 export function CurrentNote(props) {
-    const [title, setTitle] = useState('Stay happy!');
-    const [content, setContent] = useState('Write something~');
+    const [title, setTitle] = useState('');
+    const [content, setContent] = useState('');
 
     const handleTitle = (event) => {
         setTitle(event.target.value);
