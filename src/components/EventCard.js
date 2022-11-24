@@ -26,7 +26,7 @@ export default function EventCard(props) {
                 <div className='card-body'>
                     {/* modify title by css */}
                     <h2 className='event-title'>{titleCase(evtObj.title)}</h2>
-                    <img className='event-img' src={'./img'+evtObj.img}></img>
+                    <img className='event-img' src={'./img/otterlarger.png'}></img>
                     <p className='event-detail'>{evtObj.detail}</p>
                     <p className='event-time'>{"Time: "+evtObj.timestampStart+" ~ "+evtObj.timestampEnd}</p>
                     <p className='event-location'>{"Location: "+evtObj.location}</p>
