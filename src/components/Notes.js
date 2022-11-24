@@ -4,8 +4,8 @@ import NOTE_DATA from '../data/noteData.json';
 export default function Notes(props) {
     const noteArr = NOTE_DATA.map((note) => {
         return (
-            <div class="row">
-                <div class="card my-2 p-3 rounded-0">
+            <div className="row">
+                <div className="card my-2 p-3 rounded-0">
                     <h3>{note.title}</h3>
                     <p>{note.content}</p>
                 </div>

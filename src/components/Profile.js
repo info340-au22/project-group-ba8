@@ -9,7 +9,7 @@ export default function Profile(props) {
 
 
     return (
-        <div className>
+        <div>
             <div className="mx-5 mb-5">
                 <div className="container-fluid mt-4">
                     <div className="row">
