@@ -72,7 +72,7 @@ export default function Form(props) {
 
                 <div className="col-md-4">
                     <label htmlFor="date-input" className="form-label">Date:</label>
-                    <input type="date" id="date-Input" className="form-control" 
+                    <input type="date" id="date-input" className="form-control" 
                     value={date} onChange={handleDate} required />
                 </div>
 
@@ -90,7 +90,7 @@ export default function Form(props) {
 
                 <div className="col-12">
                     <label htmlFor="intro-input" className="form-label">Introduction:</label>
-                    <textarea className="form-control" id="intro-input" placeholder="What it is.." 
+                    <textarea className="form-control" id="intro-input" placeholder="Give some introduction!" 
                     value={detail} onChange={handleIntro} required ></textarea>
                 </div>
 
