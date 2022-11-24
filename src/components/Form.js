@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function Form(props) {
     const [title, setTitle] = useState('Avoid crash');
-    const [isSaved, setIsSaved] = useState(true);
+    const [privacy, setPrivacy] = useState(false);
     const [location, setLocation] = useState('');
     const [date, setDate] = useState('');
     const [timestampStart, setTimestampStart] = useState('');
@@ -11,37 +11,37 @@ export default function Form(props) {
 
     const handleName = (event) => {
         setTitle(event.target.value);
-        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
     }
 
     const handlePrivacy = (event) => {
-        setIsSaved(event.target.checked);
-        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
+        setPrivacy(event.target.checked);
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
     }
 
     const handleLocation = (event) => {
         setLocation(event.target.value);
-        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
     }
     const handleDate = (event) => {
         setDate(event.target.value);
-        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
     }
     const handleStartTime = (event) => {
         setTimestampStart(event.target.value);
-        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
     }
     const handleEndTime = (event) => {
         setTimestampEnd(event.target.value);
-        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
     }
     const handleIntro = (event) => {
         setDetail(event.target.value);
-        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
     }
 
     const handleSubmit = (event) => {
-        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
         event.preventDefault();
     }
 
