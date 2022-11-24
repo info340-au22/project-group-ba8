@@ -44,6 +44,31 @@ export default function Profile(props) {
                     </div>
 
                     <AddNote getFormCallback={cur}/>
+                    <div class="col-sm-12 col-lg-4 card-col">
+                        <div class="card my-2 p-3 rounded-0">
+                            <div class="card-body">
+                                <h2>Notes</h2>
+                                <div class="container">
+        
+                                    <div class="row">
+                                        <div class="card my-2 p-3 rounded-0">
+                                            <h3>Things before Alaska</h3>
+                                            <p>A good fur coat, Alaska local sim card, Power bank ,Visit grandparents before leaving</p>
+                                        </div>
+                                    </div>
+        
+                                    <div class="row">
+                                        <div class="card my-2 p-3 rounded-0">
+                                            <h3>Marco</h3>
+                                            <p>
+                                                Marco said we should go to Mt. Rainier next weekend. Remember to ask uncle Bill to drive us there.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
                     
             </div>
