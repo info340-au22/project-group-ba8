@@ -1,43 +1,47 @@
 import React, { useState } from 'react';
 
 export default function Form(props) {
-    const [name, setName] = useState('');
-    const [privacy, setPrivacy] = useState(false);
+    const [title, setTitle] = useState('Avoid crash');
+    const [isSaved, setIsSaved] = useState(true);
     const [location, setLocation] = useState('');
     const [date, setDate] = useState('');
-    const [time, setTime] = useState('');
-    const [intro, setIntro] = useState('');
+    const [timestampStart, setTimestampStart] = useState('');
+    const [timestampEnd, setTimestampEnd] = useState('');
+    const [detail, setDetail] = useState('');
 
     const handleName = (event) => {
-        setName(event.target.value);
-        props.getFormCallback({name,privacy,location,date,time,intro});
+        setTitle(event.target.value);
+        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
     }
 
     const handlePrivacy = (event) => {
-        setPrivacy(event.target.checked);
-        props.getFormCallback({name,privacy,location,date,time,intro});
+        setIsSaved(event.target.checked);
+        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
     }
 
     const handleLocation = (event) => {
         setLocation(event.target.value);
-        props.getFormCallback({name,privacy,location,date,time,intro});
+        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
     }
     const handleDate = (event) => {
         setDate(event.target.value);
-        props.getFormCallback({name,privacy,location,date,time,intro});
+        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
     }
-    const handleTime = (event) => {
-        setTime(event.target.value);
-        props.getFormCallback({name,privacy,location,date,time,intro});
+    const handleStartTime = (event) => {
+        setTimestampStart(event.target.value);
+        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
     }
-
+    const handleEndTime = (event) => {
+        setTimestampEnd(event.target.value);
+        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
+    }
     const handleIntro = (event) => {
-        setIntro(event.target.value);
-        props.getFormCallback({name,privacy,location,date,time,intro});
+        setDetail(event.target.value);
+        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
     }
 
     const handleSubmit = (event) => {
-        props.getFormCallback({name,privacy,location,date,time,intro});
+        props.getFormCallback({title,isSaved,location,date,timestampStart,timestampEnd,detail});
         event.preventDefault();
     }
 
@@ -47,7 +51,7 @@ export default function Form(props) {
                 <div className="col-md-9">
                     <label htmlFor="event-input" className="form-label">Event:</label>
                     <input type="text" className="form-control" id="event-input" 
-                    placeholder="Consider a cool name.." value={name} onChange={handleName} required />
+                    placeholder="Consider a cool name.." value={title} onChange={handleName} required />
                 </div>
 
                 <div className="col-md-3 align-self-end">
@@ -66,22 +70,28 @@ export default function Form(props) {
                     </div>
                 </div>
 
-                <div className="col-md-6">
+                <div className="col-md-4">
                     <label htmlFor="date-input" className="form-label">Date:</label>
                     <input type="date" id="date-Input" className="form-control" 
                     value={date} onChange={handleDate} required />
                 </div>
 
-                <div className="col-md-6">
-                    <label htmlFor="time-input" className="form-label">Time:</label>
-                    <input type="time" className="form-control" id="time-input" 
-                    value={time} onChange={handleTime} required />
+                <div className="col-md-4">
+                    <label htmlFor="start-time-input" className="form-label">Start time:</label>
+                    <input type="time" className="form-control" id="start-time-input" 
+                    value={timestampStart} onChange={handleStartTime} required />
+                </div>
+
+                <div className="col-md-4">
+                    <label htmlFor="end-time-input" className="form-label">End time:</label>
+                    <input type="time" className="form-control" id="end-time-input" 
+                    value={timestampEnd} onChange={handleEndTime} required />
                 </div>
 
                 <div className="col-12">
                     <label htmlFor="intro-input" className="form-label">Introduction:</label>
                     <textarea className="form-control" id="intro-input" placeholder="What it is.." 
-                    value={intro} onChange={handleIntro} required ></textarea>
+                    value={detail} onChange={handleIntro} required ></textarea>
                 </div>
 
                 <div className="col-12">

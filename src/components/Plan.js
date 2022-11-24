@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Form from "./Form";
+import EventCard from "./EventCard";
 
 export default function Plan(props) {
-    const [eventObj,setEventObj] = useState({});
+    const [eventObj,setEventObj] = useState({title:'Event Name',detail:'What it is...',timestampStart:'00:00',timestampEnd:'00:00',location:'Where it is...',isSaved:true});
 
     const getForm = (formObj) => {
         setEventObj(formObj);
@@ -14,11 +15,7 @@ export default function Plan(props) {
             <div className="row">
                 <Form getFormCallback={getForm}/>
                 <div className="d-none d-xl-block col-xl-4">
-                    <h1>Event: {eventObj.name}</h1>
-                    <h1>Location: {eventObj.location}</h1>
-                    <h1>Date: {eventObj.date}</h1>
-                    <h1>Time: {eventObj.time}</h1>
-                    <h1>Intro: {eventObj.intro}</h1>
+                    <EventCard evtObj={eventObj}/>
                 </div>
             </div>
         </div>
