@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from 'react';
+import {CurrentNote} from "./currentNote"
 
 export default function Profile(props) {
+    const [noteObj,setNoteObj] = useState({title:'title', content:'content'});
+    const cur = (formObj) => {
+        setNoteObj(formObj);
+    }
     return (
         <div className>
-            <h1>This is Profile Page</h1>
             <div className="mx-5 mb-5">
                 <div className="container-fluid mt-4">
                     <div className="row">
@@ -36,7 +40,8 @@ export default function Profile(props) {
                             </div>
                         </div>
                     </div>
-                    <currentNote />
+
+                    <CurrentNote getFormCallback={cur}/>
                     
             </div>
             </div>
