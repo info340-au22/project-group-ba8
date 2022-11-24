@@ -9,12 +9,18 @@ import POST_DATA from '../data/postData.json';
 
 export default function App(props) {
 
+    const [postData, setPostData] = useState(POST_DATA);
+    function evtBtnCallbk() {
+        const postDataCopy = [...postData];
+        setPostData(postDataCopy);
+    }
+
     return (
         <div>
             <Navbar />
             <Routes>
-                <Route index element={<Home postData={POST_DATA} /> }/>
-                <Route path='/home' element={<Home postData={POST_DATA} /> }/>
+                <Route index element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} /> }/>
+                <Route path='/home' element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} /> }/>
                 <Route path='/plan' element={<Plan />}/>
                 <Route path='/profile' element={<Profile />}/>
             </Routes>

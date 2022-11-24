@@ -8,9 +8,7 @@ export default function EventCard(props) {
         str = str.toLowerCase();
         let wordArr = str.split(' ');
         wordArr = wordArr.map((word) => {
-            
-            if (word[0]!= undefined)
-            {
+            if (word[0]!= undefined) {
             return (word[0].toUpperCase() + word.substring(1));
             }
         })
@@ -19,7 +17,7 @@ export default function EventCard(props) {
     
     function handleClick() {
         
-        props.evtBtnCallbk(isSaved);
+        props.evtBtnCallbk();
         
     }
     

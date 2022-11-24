@@ -2,11 +2,18 @@ import React from "react";
 import EventCard from "./EventCard";
 
 export default function Home(props) {
-    console.log(props);
+    // console.log(props);
     const publicPosts = props.postData.map((post) => {
         if (!post.isSaved){
             return (
-                <EventCard evtObj={post} isSaved={post.isSaved} key={post.id} />
+                <EventCard evtObj={post} isSaved={post.isSaved} key={post.id} evtBtnCallbk={props.evtBtnCallbk}/>
+            )
+        }
+    })
+    const savedPosts = props.postData.map((post) => {
+        if (post.isSaved){
+            return (
+                <EventCard evtObj={post} isSaved={post.isSaved} key={post.id} evtBtnCallbk={props.evtBtnCallbk} />
             )
         }
     })
@@ -24,23 +31,11 @@ export default function Home(props) {
                     <div className="col-lg-4">
                         <div className="my-2 p-3">
                             <h1>Your Saved Events</h1>
-                            {savedEvents(props.postData)}
+                            {savedPosts}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     );
-}
-function savedEvents(inp) {
-    console.log(inp);
-     const ret = inp.map((obj) => {
-            
-        if (obj.isSaved === true)
-        {
-        return (<EventCard evtObj={obj}/>);
-        }
-    })
-    return ret;
-
 }
