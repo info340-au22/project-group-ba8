@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function Form(props) {
-    const [title, setTitle] = useState('Avoid crash');
+    const [title, setTitle] = useState('');
     const [privacy, setPrivacy] = useState(false);
     const [location, setLocation] = useState('');
     const [date, setDate] = useState('');
