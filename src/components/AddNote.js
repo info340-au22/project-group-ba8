@@ -41,7 +41,7 @@ export function AddNote(props) {
                 </div>
 
 
-                <div className="row-2">
+                <div className="row-2 d-flex row">
                     <button type="button" className="btn btn-dark my-2">
                         Add Note
                     </button>
