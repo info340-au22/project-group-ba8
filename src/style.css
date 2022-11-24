@@ -18,7 +18,7 @@ img {
 
 footer {
     background-image: url('../public/img/footersmaller.png');
-    background-repeat: no-repeat;
+
 }
 
 footer > p {
@@ -83,7 +83,6 @@ footer h3 {
 
 nav {
     background-image: url('../public/img/navsmaller.png');
-    background-repeat: no-repeat;
     font-weight: bold;
 }
 
