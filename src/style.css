@@ -219,3 +219,9 @@ label, form .btn{
     font-weight: bold;
 }
 
+@media (max-width:598px) {
+    .row .card-body {
+        background-color: rgb(147, 198, 215);
+    }
+}
+
