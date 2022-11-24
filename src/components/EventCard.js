@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 export default function EventCard(props) {
     const evtObj = props.evtObj;
+    //console.log(props);
     const isSaved = evtObj.isSaved;
     function titleCase(str) {
         str = str.toLowerCase();
@@ -15,9 +16,14 @@ export default function EventCard(props) {
         })
         return wordArr.join(' ');
     }
+    
     function handleClick() {
+        
         props.evtBtnCallbk(isSaved);
+        
     }
+    
+
     return (
             <div className='card my-3 rounded-0 event-card'>
                 <div className='card-body'>
@@ -33,6 +39,29 @@ export default function EventCard(props) {
         );
     }
     
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // <div className='card card-group my-2 p-4 rounded-0 container-fluid'>
     //         <div className="row collapse-parent">
     //             <div class="card py-2 rounded-0 collapse-btn"  type="button" data-bs-toggle="collapse" data-bs-target="#summer2022Detail" aria-expanded="false" aria-controls="summer2022Detail">

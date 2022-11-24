@@ -2,6 +2,7 @@ import React from "react";
 import EventCard from "./EventCard";
 
 export default function Home(props) {
+    console.log(props);
     const publicPosts = props.postData.map((post) => {
         if (!post.isSaved){
             return (
@@ -23,11 +24,23 @@ export default function Home(props) {
                     <div className="col-lg-4">
                         <div className="my-2 p-3">
                             <h1>Your Saved Events</h1>
-                            <EventCard evtObj={props.postData[0]}/>
+                            {savedEvents(props.postData)}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     );
+}
+function savedEvents(inp) {
+    console.log(inp);
+     const ret = inp.map((obj) => {
+            
+        if (obj.isSaved === true)
+        {
+        return (<EventCard evtObj={obj}/>);
+        }
+    })
+    return ret;
+
 }
