@@ -6,6 +6,8 @@ export default function Profile(props) {
     const cur = (formObj) => {
         setNoteObj(formObj);
     }
+
+
     return (
         <div className>
             <div className="mx-5 mb-5">

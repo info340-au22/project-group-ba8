@@ -6,6 +6,7 @@ import Plan from './Plan.js';
 import Profile from './Profile.js';
 import Footer from './Footer.js';
 import POST_DATA from '../data/postData.json';
+import NOTE_DATA from '../data/noteData.json';
 
 export default function App(props) {
 
