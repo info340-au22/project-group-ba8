@@ -1,19 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import EventCard from "./EventCard";
 
 export default function Home(props) {
+
+    const [postData,setPostData] = useState(props.postData);
+
+
+    const changeCard = (title) => {
+
+        const updateCards = postData.map((card) => {
+            if (card.title !== title) {
+              return card;
+            }
+            const update = card;
+            update.isSaved = !update.isSaved;
+            return update;
+          })
+          setPostData(updateCards);
+    }
+
     // console.log(props);
     const publicPosts = props.postData.map((post) => {
         if (!post.isSaved){
             return (
-                <EventCard evtObj={post} isSaved={post.isSaved} key={post.id} evtBtnCallbk={props.evtBtnCallbk}/>
+                <EventCard evtObj={post} isSaved={post.isSaved} key={post.id} evtBtnCallbk={changeCard}/>
             )
         }
     })
     const savedPosts = props.postData.map((post) => {
         if (post.isSaved){
             return (
-                <EventCard evtObj={post} isSaved={post.isSaved} key={post.id} evtBtnCallbk={props.evtBtnCallbk} />
+                <EventCard evtObj={post} isSaved={post.isSaved} key={post.id} evtBtnCallbk={changeCard} />
             )
         }
     })

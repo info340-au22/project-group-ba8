@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 export default function EventCard(props) {
     const evtObj = props.evtObj;
     //console.log(props);
+    const cardTitle = evtObj.title;
     const isSaved = evtObj.isSaved;
     function titleCase(str) {
         str = str.toLowerCase();
@@ -16,9 +17,7 @@ export default function EventCard(props) {
     }
     
     function handleClick() {
-        
-        props.evtBtnCallbk();
-        
+        props.evtBtnCallbk(cardTitle); 
     }
     
 
