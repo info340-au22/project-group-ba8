@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export function CurrentNote(props) {
+export function AddNote(props) {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 

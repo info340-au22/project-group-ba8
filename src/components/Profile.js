@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {CurrentNote} from "./CurrentNote"
+import {AddNote} from "./AddNote"
 
 export default function Profile(props) {
     const [noteObj,setNoteObj] = useState({title:'title', content:'content'});
@@ -43,7 +43,7 @@ export default function Profile(props) {
                         </div>
                     </div>
 
-                    <CurrentNote getFormCallback={cur}/>
+                    <AddNote getFormCallback={cur}/>
                     
                     
             </div>
