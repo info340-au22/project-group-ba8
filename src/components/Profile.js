@@ -17,7 +17,7 @@ export default function Profile(props) {
                         <div className="card my-2 p-3 rounded-0">
                             <div className="card-body">
                                 <h2 id="personalPicture">Personal Info</h2>
-                                <img className="avatar" label="avatar" src="img/beaver.jpg" />
+                                <img className="avatar" label="avatar" src="img/profile.png" />
                                 <dl className="my-2">
                                     <dt className="col-sm-3">Name</dt>
                                     <dd className="col-sm-9">
