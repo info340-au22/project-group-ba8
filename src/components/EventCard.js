@@ -7,7 +7,7 @@ export default function EventCard(props) {
         str = str.toLowerCase();
         let wordArr = str.split(' ');
         wordArr = wordArr.map((word) => {
-            console.log(word[0]);
+            
             if (word[0]!= undefined)
             {
             return (word[0].toUpperCase() + word.substring(1));
