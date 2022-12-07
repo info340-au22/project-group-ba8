@@ -7,8 +7,20 @@ import Profile from './Profile.js';
 import Footer from './Footer.js';
 import POST_DATA from '../data/postData.json';
 import NOTE_DATA from '../data/noteData.json';
+import {getDatabase,ref,set as firebaseSet} from 'firebase/database';
 
 export default function App(props) {
+    const db = getDatabase();
+    const oneEvent = ref(db,'Event1');
+    console.log(oneEvent);
+    firebaseSet(oneEvent,"I am freaking clever")
+
+
+
+
+
+
+
 
     const [postData, setPostData] = useState(POST_DATA);
     function evtBtnCallbk() {

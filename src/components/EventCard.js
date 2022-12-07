@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import {getDatabase,ref} from 'firebase/database';
 export default function EventCard(props) {
     const evtObj = props.evtObj;
     const cardTitle = evtObj.title;
