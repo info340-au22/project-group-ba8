@@ -13,7 +13,7 @@ export default function App(props) {
     const db = getDatabase();
     const oneEvent = ref(db,'Event1');
     console.log(oneEvent);
-    firebaseSet(oneEvent,"I am freaking clever")
+    firebaseSet(oneEvent,POST_DATA);
 
 
 
