@@ -19,8 +19,9 @@ export default function Home(props) {
           setPostData(updateCards);
     }
 
-    // console.log(props);
+    
     const publicPosts = props.postData.map((post) => {
+        
         if (!post.isSaved){
             return (
                 <EventCard evtObj={post} isSaved={post.isSaved} key={post.id} evtBtnCallbk={changeCard}/>
