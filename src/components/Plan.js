@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import Form from "./Form";
 import EventCard from "./EventCard";
 
+import {getDatabase,ref,push as firebasePush} from 'firebase/database';
+
 export default function Plan(props) {
     const [eventObj,setEventObj] = useState({title:'',date:'',timestampEnd:'',location:'',isSaved:false});
 
-    const getForm = (formObj) => {
+    const getForm = (formObj,done) => {
         setEventObj(formObj);
+        if (done) {
+            const db = getDatabase();
+            const events = ref(db,'Events');
+            firebasePush(events,eventObj);
+        }
     }
 
     return (

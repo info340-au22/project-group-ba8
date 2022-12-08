@@ -11,37 +11,37 @@ export default function Form(props) {
 
     const handleName = (event) => {
         setTitle(event.target.value);
-        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail},false);
     }
 
     const handlePrivacy = (event) => {
         setPrivacy(event.target.checked);
-        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail},false);
     }
 
     const handleLocation = (event) => {
         setLocation(event.target.value);
-        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail},false);
     }
     const handleDate = (event) => {
         setDate(event.target.value);
-        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail},false);
     }
     const handleStartTime = (event) => {
         setTimestampStart(event.target.value);
-        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail},false);
     }
     const handleEndTime = (event) => {
         setTimestampEnd(event.target.value);
-        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail},false);
     }
     const handleIntro = (event) => {
         setDetail(event.target.value);
-        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail},false);
     }
 
     const handleSubmit = (event) => {
-        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail});
+        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail},true);
         event.preventDefault();
     }
 

@@ -11,16 +11,9 @@ import {getDatabase,ref,set as firebaseSet} from 'firebase/database';
 
 export default function App(props) {
     const db = getDatabase();
-    const oneEvent = ref(db,'Event1');
-    console.log(oneEvent);
-    firebaseSet(oneEvent,POST_DATA);
-
-
-
-
-
-
-
+    const events = ref(db,'Events');
+    console.log(events);
+    firebaseSet(events,POST_DATA);
 
     const [postData, setPostData] = useState(POST_DATA);
     function evtBtnCallbk() {
