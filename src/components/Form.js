@@ -95,7 +95,7 @@ export default function Form(props) {
                 </div>
 
                 <div className="col-12">
-                    <label htmlFor="background-image" className="form-label">Background image</label>
+                    <label htmlFor="background-image" className="form-label">Image</label>
                     <input type="file" className="form-control" id="background-image" />
                 </div>
 

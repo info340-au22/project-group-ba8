@@ -59,7 +59,7 @@ export default function App(props) {
 
 
     return (
-        <div>
+        <div className='the-app'>
             <Navbar />
             <Routes>
                 <Route index element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />

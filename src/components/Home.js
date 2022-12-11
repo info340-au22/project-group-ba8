@@ -36,7 +36,7 @@ export default function Home(props) {
         }
     })
     return (
-        <div className="index-body mt-4 mx-3">
+        <div className="react-body mt-4 mx-3">
             {/* <h1>This is Home Page</h1> */}
             <div className="container-fluid mr-0">
                 <div className="row justify-content-around">
