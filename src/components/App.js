@@ -11,6 +11,34 @@ import { getDatabase, onValue, ref, set as firebaseSet } from 'firebase/database
 
 export default function App(props) {
 
+    const [userName, setUserName] = useState('Beaver B. Beaver');
+    const [userLang, setUserLang] = useState('English, French, Beaverish');
+    const [userPlaces, setUserPlaces] = useState('Rivers, Forests, Woodcraft Fairs');
+    const [userFood, setUserFood] = useState('Flowers, Berries, Fish');
+    
+    function changeUserName(str) {
+        setUserName(str);
+    }
+    function changeUserLang(str) {
+        setUserLang(str);
+    }
+    function changeUserPlaces(str) {
+        setUserPlaces(str);
+    }
+    function changeUserFood(str) {
+        setUserFood(str);
+    }
+
+    const userProfile = {
+        'userName': userName,
+        'changeUserName': changeUserName,
+        'userLang': userLang,
+        'changeUserLang': changeUserLang,
+        'userPlaces': userPlaces,
+        'changeUserPlaces': changeUserPlaces,
+        'userFood': userFood,
+        'changeUserFood': changeUserFood
+    };
     
     /*
     console.log(events);
@@ -65,7 +93,7 @@ export default function App(props) {
                 <Route index element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
                 <Route path='/home' element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
                 <Route path='/plan' element={<Plan />} />
-                <Route path='/profile' element={<Profile />} />
+                <Route path='/profile' element={<Profile userProfile={userProfile} />} />
             </Routes>
             <Footer />
         </div>

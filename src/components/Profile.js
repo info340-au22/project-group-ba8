@@ -2,48 +2,51 @@ import React, { useState } from 'react';
 import {AddNote} from "./AddNote"
 
 export default function Profile(props) {
-    const [userName, setUserName] = useState('Beaver B. Beaver');
+    const userProfile = props.userProfile;
+
     const [userNameInput, setUserNameInput] = useState('');
-    const [userLang, setUserLang] = useState('English, French, Beaverish');
     const [userLangInput, setUserLangInput] = useState('');
-    const [userPlaces, setUserPlaces] = useState('Rivers, Forests, Woodcraft Fairs');
     const [userPlacesInput, setUserPlacesInput] = useState('');
-    const [userFood, setUserFood] = useState('Flowers, Berries, Fish');
     const [userFoodInput, setUserFoodInput] = useState('');
+
     const [noteObj,setNoteObj] = useState({title:'title', content:'content'});
     const cur = (formObj) => {
         setNoteObj(formObj);
     }
 
+    // handle name input and change
     function handleNameInput(evt) {
         setUserNameInput(evt.target.value);
     }
     function handleNameChange(evt) {
-        setUserName(userNameInput);
+        userProfile.changeUserName(userNameInput);
         setUserNameInput('');
     }
 
+    // handle language input and change
     function handleLangInput(evt) {
         setUserLangInput(evt.target.value);
     }
     function handleLangChange(evt) {
-        setUserLang(userLangInput);
+        userProfile.changeUserLang(userLangInput);
         setUserLangInput('');
     }
 
+    // handle places input and change
     function handlePlacesInput(evt) {
         setUserPlacesInput(evt.target.value);
     }
     function handlePlacesChange(evt) {
-        setUserPlaces(userPlacesInput);
+        userProfile.changeUserPlaces(userPlacesInput);
         setUserPlacesInput('');
     }
 
+    // handle food input and change
     function handleFoodInput(evt) {
         setUserFoodInput(evt.target.value);
     }
     function handleFoodChange(evt) {
-        setUserFood(userFoodInput);
+        userProfile.changeUserFood(userFoodInput);
         setUserFoodInput('');
     }
 
@@ -66,7 +69,7 @@ export default function Profile(props) {
                                             Name
                                         </dt>
                                         <dd className="col">
-                                            <p>{userName}</p>
+                                            <p>{userProfile.userName}</p>
                                         </dd>
                                         <div className='col-4'>
                                             <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editName" aria-expanded="false" aria-controls="editName"><i class="material-icons">edit</i></button>
@@ -86,7 +89,7 @@ export default function Profile(props) {
                                             Language
                                         </dt>
                                         <dd className="col">
-                                            <p>{userLang}</p>
+                                            <p>{userProfile.userLang}</p>
                                         </dd>
                                         <div className='col-4'>
                                             <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editLang" aria-expanded="false" aria-controls="editLang"><i class="material-icons">edit</i></button>
@@ -106,7 +109,7 @@ export default function Profile(props) {
                                             Places
                                         </dt>
                                         <dd className="col">
-                                            <p>{userPlaces}</p>
+                                            <p>{userProfile.userPlaces}</p>
                                         </dd>
                                         <div className='col-4'>
                                             <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editPlaces" aria-expanded="false" aria-controls="editPlaces"><i class="material-icons">edit</i></button>
@@ -126,7 +129,7 @@ export default function Profile(props) {
                                             Food
                                         </dt>
                                         <dd className="col">
-                                            <p>{userFood}</p>
+                                            <p>{userProfile.userFood}</p>
                                         </dd>
                                         <div className='col-4'>
                                             <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editFood" aria-expanded="false" aria-controls="editFood"><i class="material-icons">edit</i></button>
