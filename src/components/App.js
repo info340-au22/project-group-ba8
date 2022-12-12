@@ -11,11 +11,11 @@ import { getDatabase, onValue, ref, set as firebaseSet } from 'firebase/database
 
 export default function App(props) {
 
+    // user profile default info, with functions to set new ones
     const [userName, setUserName] = useState('Beaver B. Beaver');
     const [userLang, setUserLang] = useState('English, French, Beaverish');
     const [userPlaces, setUserPlaces] = useState('Rivers, Forests, Woodcraft Fairs');
     const [userFood, setUserFood] = useState('Flowers, Berries, Fish');
-    
     function changeUserName(str) {
         setUserName(str);
     }
@@ -28,7 +28,6 @@ export default function App(props) {
     function changeUserFood(str) {
         setUserFood(str);
     }
-
     const userProfile = {
         'userName': userName,
         'changeUserName': changeUserName,

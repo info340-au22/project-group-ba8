@@ -5,14 +5,19 @@ html, body, #root {
     height: 100%;
 }
 
+/* turn into flex box */
 .the-app {
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+/* flex grow 1 */
 .react-body {
-    padding: 10px;
+    flex-grow: 1;
+    /* padding: 10px;
     padding-bottom: 30vh;
-    height: calc(100% - 272px);
+    height: calc(100% - 272px); */
 }
 
 img {
