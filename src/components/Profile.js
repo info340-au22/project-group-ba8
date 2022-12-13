@@ -109,7 +109,9 @@ export default function Profile(props) {
             </div>
             </div>
             
-
+            <div className="d-grid gap-2 col-6 mx-auto mt-4 mb-4">
+                <button className="btn btn-secondary ms-2" onClick={props.outback}>Sign Out</button>
+            </div>
             </div>
         </div>
     );

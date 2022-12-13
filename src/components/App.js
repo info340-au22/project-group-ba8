@@ -22,6 +22,22 @@ export default function App(props) {
     const [userPlaces, setUserPlaces] = useState('Rivers, Forests, Woodcraft Fairs');
     const [userFood, setUserFood] = useState('Flowers, Berries, Fish');
 
+    // useEffect(() => {
+    //     const db = getDatabase();
+    //     const data = ref(db, 'userData/'+currentUser.uid);
+    //     onValue(events, (snapshot) => {
+    //         const changedValue = snapshot.val();
+            
+    //         const objkeys = Object.keys(changedValue);
+    //         const changedEvents = objkeys.map((keyString) =>{
+    //             const obj = changedValue[keyString];
+    //             obj.id= keyString;
+    //             return obj;
+    //         })
+    //         setPostData(changedEvents);
+    //     })
+    // },[]);
+
     function changeUserName(str) {
         setUserName(str);
         const userDbRef =ref(getDatabase(), "userData/"+currentUser.uid+"/profile/name");
@@ -98,8 +114,8 @@ export default function App(props) {
                 <Route element={<ProtectedPage currentUser={currentUser} />}>
                     <Route index element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
                     <Route path='home' element={<Home currentUser={currentUser} postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
-                    <Route path='plan' element={<Plan currentUser={currentUser} outback={handleSignOut}/>} />
-                    <Route path='profile' element={<Profile currentUser={currentUser} userProfile={userProfile} noteData={NOTE_DATA} />} />        
+                    <Route path='plan' element={<Plan currentUser={currentUser}/>} />
+                    <Route path='profile' element={<Profile currentUser={currentUser} userProfile={userProfile} noteData={NOTE_DATA} outback={handleSignOut}/>} />        
                 </Route>
             </Routes>
             <Footer />

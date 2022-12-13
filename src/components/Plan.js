@@ -24,7 +24,6 @@ export default function Plan(props) {
                 <div className="col-xl-4">
                 <label className="form-label">Preview:</label>
                     <EventCard evtObj={eventObj}/>
-                    <button className="btn btn-secondary ms-2" onClick={props.outback}>Sign Out</button>
                 </div>
             </div>
         </div>
