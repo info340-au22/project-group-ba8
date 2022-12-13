@@ -86,12 +86,23 @@ nav {
     min-width: 100px;
 }
 
+.app-logo {
+    display: block;
+}
+
 .navtext{
     margin-top: 1em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: .4em;
     font-size: 20px;
+}
 
+.navtext i {
+    font-size: 1.5em;
+}
+
+.nav-label {
+    display: none;
 }
 
 .event-title, .event p {
@@ -117,4 +128,10 @@ label, .btn, h1{
 
 .personal-term {
     margin-bottom: .5em;
+}
+
+@media (min-width: 630px) {
+    .nav-label {
+        display: inline;
+    }
 }
