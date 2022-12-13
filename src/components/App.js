@@ -43,11 +43,7 @@ export default function App(props) {
         'userFood': userFood,
         'changeUserFood': changeUserFood,
     };
-    
-    /*
-    console.log(events);
-    firebaseSet(events,POST_DATA);
-*/
+
     const [postData, setPostData] = useState(POST_DATA);
     function evtBtnCallbk() {
         const postDataCopy = [...postData];
@@ -63,13 +59,11 @@ export default function App(props) {
         const auth = getAuth();
         onAuthStateChanged(auth, (firebaseUser) => {
             if (firebaseUser) {
-                console.log('azzz');
                 setCurrentUser(firebaseUser);
-            } else {
-                console.log("logged out");
+                navigateTo('home');
             }
         })
-    })
+    },[]);
 
     useEffect(() => {
         const db = getDatabase();
