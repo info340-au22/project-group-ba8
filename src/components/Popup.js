@@ -52,9 +52,6 @@ export function EditProfile(props) {
     setLangInput('');
     setPlacesInput('');
     setFoodInput('');
-
-    const userDbRef =ref(getDatabase(), "userData/"+currentUser.uid+"/profile");
-    firebaseSet(userDbRef,userProfile);
   }
 
   return (
