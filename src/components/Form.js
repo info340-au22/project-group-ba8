@@ -48,6 +48,7 @@ export default function Form(props) {
     return(
         <div className="col-xl-8">
             <form className="row g-3" onSubmit={handleSubmit}>
+                
                 <div className="col-md-9">
                     <label htmlFor="event-input" className="form-label">Event:</label>
                     <input type="text" className="form-control" id="event-input" 
