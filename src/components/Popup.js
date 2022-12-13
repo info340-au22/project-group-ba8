@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-export function Example() {
+export function EditProfile() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -11,8 +11,8 @@ export function Example() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Edit Profile
+      <Button variant="outline" onClick={handleShow}>
+        <i className="material-icons">edit</i>
       </Button>
 
       <Modal show={show} onHide={handleClose}>
