@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import {getDatabase,ref} from 'firebase/database';
+import Button from 'react-bootstrap/Button';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 export default function EventCard(props) {
     const evtObj = props.evtObj;
     const cardTitle = evtObj.title;
@@ -28,7 +30,9 @@ export default function EventCard(props) {
                     <p className='event-date'>{"Date: "+evtObj.date}</p>
                     <p className='event-time'>{"Time: "+evtObj.timestampStart+" ~ "+evtObj.timestampEnd}</p>
                     <p className='event-location'>{"Location: "+evtObj.location}</p>
+                    <ButtonToolbar className="custom-btn-toolbar">
                     <button className={'btn '+(isSaved ? 'btn-danger' : 'btn-primary')} onClick={handleClick}>{isSaved ? "Remove" : "Save"}</button>
+                    </ButtonToolbar>
                 </div>
             </div>
         );
