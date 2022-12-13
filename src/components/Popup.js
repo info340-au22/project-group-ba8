@@ -71,7 +71,7 @@ export function EditProfile(props) {
             <input type="text" className='form-control' id='langInput' placeholder='Type your languages' value={langInput} onChange={handleLangInput}/>
             <label htmlFor='placesInput'>Places</label>
             <input type="text" className='form-control' id='placesInput' placeholder='Type your favorite places' value={placesInput} onChange={handlePlacesInput}/>
-            <label htmlFor='foodInput'>Name</label>
+            <label htmlFor='foodInput'>Food</label>
             <input type="text" className='form-control' id='foodInput' placeholder='Type your favorite food' value={foodInput} onChange={handleFoodInput}/>
           </form>
         </Modal.Body>
