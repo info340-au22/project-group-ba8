@@ -18,7 +18,7 @@ export default function SignInPage(props) {
 
   return (
     <div className="react-body">
-        <h2 className="text-center mt-5 mb-4">Welcome to Event Map!</h2>
+        <h2 className="text-center mt-5 mb-4">Welcome to Events Share!</h2>
         <div className="container">
             <StyledFirebaseAuth firebaseAuth={auth} uiConfig={uiConfigObj} />
         </div>
