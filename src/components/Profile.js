@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import {AddNote} from "./AddNote"
+import {AddNote} from "./AddNote";
+import {Example} from "./Popup";
+import Button from 'react-bootstrap/Button';
 
 export default function Profile(props) {
     const userProfile = props.userProfile;
@@ -8,6 +10,8 @@ export default function Profile(props) {
     const [userLangInput, setUserLangInput] = useState('');
     const [userPlacesInput, setUserPlacesInput] = useState('');
     const [userFoodInput, setUserFoodInput] = useState('');
+
+    const [changeInfo, setChangeInfo] = useState(false);
 
     const [noteObj,setNoteObj] = useState({title:'title', content:'content'});
     const [allNotes, setAllNotes] = useState(props.noteData);
@@ -97,10 +101,12 @@ export default function Profile(props) {
                     <div className="col-sm-12 col-lg-4 card-col">
                         <div className="card my-2 p-3 rounded-0">
                             <div className="card-body">
+
+                            <Example show = {changeInfo} onHide = {() => setChangeInfo(false)} />
+
                                 <h2 className="personalPicture">Personal Info</h2>
                                 <img className="avatar my-3" label="avatar" src="img/beaver.jpg" alt="your user avatar" />
                                 <dl className="my-2">
-
                                     <div className="row-2 d-flex row mb-3">
                                         <dt className="col-4">
                                             Name
