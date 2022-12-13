@@ -4,13 +4,11 @@ import Note from './NoteCard';
 import { getDatabase, ref, onValue, set as firebaseSet } from 'firebase/database';
 import { EditProfile } from "./Popup";
 
-
 export default function Profile(props) {
     const currentUser = props.currentUser;
     const [changeInfo, setChangeInfo] = useState(false);
     const [noteData, setNoteData] = useState([]);
-    const [noteObj,setNoteObj] = useState({title:'title', content:'content'});
-    
+
     const [userName, setUserName] =  useState('Beaver B. Beaver');
     const [userLang, setUserLang] = useState('English, French, Beaverish');
     const [userPlaces, setUserPlaces] = useState('Rivers, Forests, Woodcraft Fairs');
@@ -84,7 +82,6 @@ export default function Profile(props) {
     },[]);
 
     const newNote = (formObj) => {
-        setNoteObj(formObj);
         let newNotes = [...noteData, formObj];
         setNoteData(newNotes);
 
@@ -174,7 +171,7 @@ export default function Profile(props) {
             </div>
             
             <div className="d-grid gap-2 col-6 mx-auto mt-4 mb-4">
-                <button className="btn btn-danger ms-2" onClick={props.outback}>Sign Out</button>
+                <button className="btn btn-danger ms-2" onClick={props.signOutCallbk}>Sign Out</button>
             </div>
             </div>
         </div>

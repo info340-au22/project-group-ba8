@@ -12,21 +12,17 @@ html, body, #root {
     flex-direction: column;
 }
 
-/* flex grow 1 */
+/* flex grow to keep body height */
 .react-body {
     flex-grow: 1;
-    /* padding: 10px;
-    padding-bottom: 30vh;
-    height: calc(100% - 272px); */
 }
 
 img {
     max-width: 10vw;
 }
 
+/* footer  */
 footer {
-    /* position:relative;
-    bottom:0; */
     height:144px;
     background-image: url('../public/img/footersmaller.png');
 }
@@ -42,6 +38,7 @@ footer a, footer {
     padding: 2em;
 }
 
+/* card style */
 .card {
     border: none;
     box-shadow: 2px 2px 5px rgb(17, 17, 112), 2px 2px 5px rgba(0, 0, 0, .16);
@@ -70,6 +67,15 @@ footer a, footer {
     color: white;
 }
 
+.event-title, .event p {
+    font-family:'Fuzzy Bubbles', cursive;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    padding-bottom: 0.6rem;
+    padding-right: 0.5rem;
+}
+
+/* navbar */
 .nav-item:hover {
     border-bottom: 2px solid black;
 }
@@ -105,18 +111,12 @@ nav {
     display: none;
 }
 
-.event-title, .event p {
-    font-family:'Fuzzy Bubbles', cursive;
-    font-weight: bold;
-    padding-left: 0.5rem;
-    padding-bottom: 0.6rem;
-    padding-right: 0.5rem;
-}
-
+/* profile */
 img.avatar {
     border-radius: 50%;
 }
 
+/* form */
 label, .btn, h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
@@ -135,6 +135,7 @@ label, .btn, h1{
     margin-bottom: .5em;
 }
 
+/* navbar mq */
 @media (min-width: 630px) {
     .nav-label {
         display: inline;

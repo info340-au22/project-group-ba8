@@ -18,12 +18,12 @@ export default function EventCard(props) {
     function handleClick() {
         props.evtBtnCallbk(cardTitle); 
     }
-
+    
     return (
             <div className='card my-3 rounded-0 event-card'>
                 <div className='card-body event'>
                     <h2 className='event-title'>{titleCase(evtObj.title)}</h2>
-                    <img className='event-img' src={'./img/otterlarger.png'}></img>
+                    <img className='event-img' src={evtObj.imageUrl || './img/otterlarger.png'}></img>
                     <p className='event-detail'>{evtObj.detail}</p>
                     <p className='event-date'>{"Date: "+evtObj.date}</p>
                     <p className='event-time'>{"Time: "+evtObj.timestampStart+" ~ "+evtObj.timestampEnd}</p>

@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
-import { getDatabase, ref, set as firebaseSet } from 'firebase/database';
 
 export function EditProfile(props) {
   const userProfile = props.userProfile;
-  const currentUser = props.currentUser;
   const [show, setShow] = useState(false);
   const [nameInput, setNameInput] = useState('');
   const [langInput, setLangInput] = useState('');
@@ -55,7 +52,7 @@ export function EditProfile(props) {
   }
 
   return (
-    <>
+    <div>
       <Button variant="outline" onClick={handleShow}>
         <i className="material-icons">edit</i>
       </Button>
@@ -85,6 +82,6 @@ export function EditProfile(props) {
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   );
 }

@@ -7,8 +7,7 @@ import Plan from './Plan.js';
 import Profile from './Profile.js';
 import Footer from './Footer.js';
 import SignInPage from './SigninPage.js';
-import NOTE_DATA from '../data/noteData.json';
-import { getDatabase, onValue, ref, set as firebaseSet } from 'firebase/database';
+import { getDatabase, onValue, ref } from 'firebase/database';
 
 export default function App(props) {
 
@@ -58,10 +57,10 @@ export default function App(props) {
             <Routes>
                 <Route path="signin" element={<SignInPage />} />
                 <Route element={<ProtectedPage currentUser={currentUser} />}>
-                    <Route index element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
+                    <Route index element={<Home currentUser={currentUser} postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
                     <Route path='home' element={<Home currentUser={currentUser} postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
-                    <Route path='plan' element={<Plan currentUser={currentUser}/>} />
-                    <Route path='profile' element={<Profile currentUser={currentUser} noteData={NOTE_DATA} outback={handleSignOut}/>} />        
+                    <Route path='plan' element={<Plan />} />
+                    <Route path='profile' element={<Profile currentUser={currentUser} signOutCallbk={handleSignOut}/>} />        
                 </Route>
             </Routes>
             <Footer />
