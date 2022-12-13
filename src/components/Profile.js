@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 import {AddNote} from "./AddNote";
 import Note from './NoteCard';
-
+import { getDatabase, ref, set as firebaseSet } from 'firebase/database';
 import { EditProfile } from "./Popup";
 
 
 export default function Profile(props) {
     const userProfile = props.userProfile;
-
+    const currentUser = props.currentUser;
     const [changeInfo, setChangeInfo] = useState(false);
 
     const [noteObj,setNoteObj] = useState({title:'title', content:'content'});
     const [allNotes, setAllNotes] = useState(props.noteData);
+    
     const newNote = (formObj) => {
         setNoteObj(formObj);
         let newNotes = [...allNotes, formObj];
         setAllNotes(newNotes);
+
+        const userDbRef =ref(getDatabase(), "userData/"+currentUser.uid+"/notes");
+        firebaseSet(userDbRef,newNotes);
+
     }
 
-    // const addToAllNotes = (formObj) => {
-    //     let newNotes = [...allNotes, formObj];
-    //     setAllNotes(newNotes);
-    // }
-
-    // Your Notes component (3rd column of the page)
     function YourNotes(props) {
         const noteDataArr = allNotes.map((note) => {
             return (
@@ -60,7 +59,7 @@ export default function Profile(props) {
 
                             
 
-                                <h2 className="personalPicture">Personal Info <EditProfile show = {changeInfo} onHide = {() => setChangeInfo(false)} 
+                                <h2 className="personalPicture">Personal Info <EditProfile currentUser={props.currentUser} show = {changeInfo} onHide = {() => setChangeInfo(false)} 
                                 userProfile = {props.userProfile}/></h2>
                                 <img className="avatar my-3" label="avatar" src="img/beaver.jpg" alt="your user avatar" />
                                 <dl className="my-2">

@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import {getDatabase,ref} from 'firebase/database';
-import Button from 'react-bootstrap/Button';
+import React from 'react';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 export default function EventCard(props) {
     const evtObj = props.evtObj;

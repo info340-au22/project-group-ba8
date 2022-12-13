@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import { getDatabase, ref, set as firebaseSet } from 'firebase/database';
 
 export function EditProfile(props) {
   const userProfile = props.userProfile;
-
+  const currentUser = props.currentUser;
   const [show, setShow] = useState(false);
   const [nameInput, setNameInput] = useState('');
   const [langInput, setLangInput] = useState('');
@@ -51,6 +52,9 @@ export function EditProfile(props) {
     setLangInput('');
     setPlacesInput('');
     setFoodInput('');
+
+    const userDbRef =ref(getDatabase(), "userData/"+currentUser.uid+"/profile");
+    firebaseSet(userDbRef,userProfile);
   }
 
   return (
