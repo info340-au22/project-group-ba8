@@ -103,7 +103,8 @@ export default function Profile(props) {
 
                             
 
-                                <h2 className="personalPicture">Personal Info <EditProfile show = {changeInfo} onHide = {() => setChangeInfo(false)} /></h2>
+                                <h2 className="personalPicture">Personal Info <EditProfile show = {changeInfo} onHide = {() => setChangeInfo(false)} 
+                                handleNameInput = {handleNameInput} handleLangInput = {handleLangInput} handlePlacesInput = {handlePlacesInput} handleFoodInput = {handleFoodInput}/></h2>
                                 <img className="avatar my-3" label="avatar" src="img/beaver.jpg" alt="your user avatar" />
                                 <dl className="my-2">
                                     <div className="row-2 d-flex row mb-3">

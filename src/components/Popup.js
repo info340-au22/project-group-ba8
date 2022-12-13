@@ -3,11 +3,27 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-export function EditProfile() {
+export function EditProfile(props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  let newName = '';
+  let newLanguage = '';
+  let newPlace = '';
+  let newFood = '';
+  function handleSubmit() {
+    setShow(false);
+    // props.handleNameInput(newName);
+    // props.handleLangInput(newLanguage);
+    // props.handlePlacesInput(newPlace);
+    // props.handleFoodInput(newFood);
+    // let newName = '';
+    // let newLanguage = '';
+    // let newPlace = '';
+    // let newFood = '';
+  }
 
   return (
     <>
@@ -26,6 +42,8 @@ export function EditProfile() {
               <Form.Control
                 type="email"
                 placeholder="Type your name"
+                //value = {newName}
+                //onChange={props.handleNameInput(this)}
                 autoFocus
               />
             </Form.Group>
@@ -36,13 +54,17 @@ export function EditProfile() {
             >
               <Form.Label>Language</Form.Label>
               <Form.Control as="textarea" rows={1} 
-              placeholder="Language(s) that you speak"/>
+              placeholder="Language(s) that you speak"
+              //value = {newName}
+              />
+              
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Places</Form.Label>
               <Form.Control
                 placeholder="Places you like"
+                //value = {newPlace}
               />
             </Form.Group>
 
@@ -50,6 +72,7 @@ export function EditProfile() {
               <Form.Label>Food</Form.Label>
               <Form.Control
                 placeholder="Food that your like"
+                //value = {newFood}
               />
             </Form.Group>
           </Form>
@@ -58,7 +81,7 @@ export function EditProfile() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleSubmit}>
             Save Changes
           </Button>
         </Modal.Footer>
