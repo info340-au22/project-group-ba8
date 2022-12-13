@@ -21,6 +21,9 @@ export default function Home(props) {
             return update;
           })
           setPostData(updateCards);
+        const db = getDatabase();
+        const events = ref(db, 'Events');
+        firebaseSet(events,updateCards);
     }
 
     const removeCard = (title) => {
@@ -33,6 +36,9 @@ export default function Home(props) {
             return update;
           })
           setPostData(updateCards);
+        const db = getDatabase();
+        const events = ref(db, 'Events');
+        firebaseSet(events,updateCards);
     }
     
     const publicPosts = props.postData.map((post) => {
