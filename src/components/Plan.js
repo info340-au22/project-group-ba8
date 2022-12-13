@@ -12,7 +12,7 @@ export default function Plan(props) {
         if (done) {
             const db = getDatabase();
             const events = ref(db,'Events');
-            firebasePush(events,eventObj);
+            firebasePush(events,formObj);
         }
     }
 
@@ -20,7 +20,7 @@ export default function Plan(props) {
     <div className="react-body">
         <div className="container mt-4">
             <div className="row">
-                <Form getFormCallback={getForm}/>
+                <Form getFormCallback={getForm} currentUser={props.currentUser}/>
                 <div className="d-none d-xl-block col-xl-4">
                 <label className="form-label">Preview:</label>
                     <EventCard evtObj={eventObj}/>

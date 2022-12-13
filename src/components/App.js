@@ -13,7 +13,7 @@ import { getDatabase, onValue, ref, set as firebaseSet } from 'firebase/database
 
 export default function App(props) {
 
-    const [currentUser, setCurrentUser] = useState({"userId": null, "userName": "Log Out"});
+    const [currentUser, setCurrentUser] = useState({"uid": null, "userName": "Log Out"});
     const navigateTo = useNavigate();
 
     // user profile default info, with functions to set new ones
@@ -96,7 +96,7 @@ export default function App(props) {
                 <Route element={<ProtectedPage currentUser={currentUser} />}>
                     <Route index element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
                     <Route path='home' element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
-                    <Route path='plan' element={<Plan />} />
+                    <Route path='plan' element={<Plan currentUser={currentUser} />} />
                     <Route path='profile' element={<Profile userProfile={userProfile} noteData={NOTE_DATA} />} />        
                 </Route>
             </Routes>
@@ -106,7 +106,7 @@ export default function App(props) {
 }
 
 function ProtectedPage(props) {
-    if(props.currentUser.userId === null) { 
+    if(props.currentUser.uid === null) { 
       return <Navigate to="/signin" />
     }
     else { 

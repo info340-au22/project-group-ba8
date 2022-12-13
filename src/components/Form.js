@@ -8,6 +8,7 @@ export default function Form(props) {
     const [timestampStart, setTimestampStart] = useState('');
     const [timestampEnd, setTimestampEnd] = useState('');
     const [detail, setDetail] = useState('');
+    const uid = props.currentUser.uid;
 
     const handleName = (event) => {
         setTitle(event.target.value);
@@ -36,12 +37,13 @@ export default function Form(props) {
         props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail},false);
     }
     const handleIntro = (event) => {
+        console.log(uid);
         setDetail(event.target.value);
         props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail},false);
     }
 
     const handleSubmit = (event) => {
-        props.getFormCallback({title,privacy,location,date,timestampStart,timestampEnd,detail},true);
+        props.getFormCallback({uid,title,privacy,location,date,timestampStart,timestampEnd,detail},true);
         event.preventDefault();
     }
 
