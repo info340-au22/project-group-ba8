@@ -50,18 +50,20 @@ export default function Profile(props) {
         const profile = ref(db, 'userData/'+currentUser.uid+'/profile');
         onValue(profile, (snapshot) => {
             const changedValue = snapshot.val();
-            if (changedValue.name) {
-                setUserName(changedValue.name);
+            if (changedValue) {
+                if (changedValue.name) {
+                    setUserName(changedValue.name);
+                }
+                if (changedValue.lang) {
+                    setUserLang(changedValue.lang);
+                }
+                if (changedValue.places) {
+                    setUserPlaces(changedValue.places);
+                }
+                if (changedValue.food) {
+                    setUserFood(changedValue.food);
+                }    
             }
-            if (changedValue.lang) {
-                setUserLang(changedValue.lang);
-            }
-            if (changedValue.places) {
-                setUserPlaces(changedValue.places);
-            }
-            if (changedValue.food) {
-                setUserFood(changedValue.food);
-            }    
         })
     },[]);
 
@@ -70,14 +72,15 @@ export default function Profile(props) {
         const notes = ref(db, "userData/"+currentUser.uid+"/notes");
         onValue(notes, (snapshot) => {
             const changedValue = snapshot.val();
-            
-            const objkeys = Object.keys(changedValue);
-            const changedNotes = objkeys.map((keyString) =>{
-                const obj = changedValue[keyString];
-                obj.id= keyString;
-                return obj;
-            })
-            setNoteData(changedNotes);
+            if (changedValue) {
+                const objkeys = Object.keys(changedValue);
+                const changedNotes = objkeys.map((keyString) =>{
+                    const obj = changedValue[keyString];
+                    obj.id= keyString;
+                    return obj;
+                })
+                setNoteData(changedNotes);
+            }
         })
     },[]);
 

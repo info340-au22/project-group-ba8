@@ -103,7 +103,7 @@ export default function Form(props) {
                 </div>
 
                 <div className="d-grid gap-2 col-6 mx-auto mt-4 mb-4">
-                    <button className="btn btn-dark" type="submit">Add it to your plan!</button>
+                    <button className="btn btn-dark" type="submit">Post the event!</button>
                 </div>
             </form>
         </div>

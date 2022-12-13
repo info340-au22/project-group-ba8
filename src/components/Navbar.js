@@ -13,7 +13,7 @@ export default function Navbar(props) {
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" aria-current="page" to="/home">
-                           <p className = "navtext"><i className="material-icons">receipt_long</i><span className="nav-label">Events Map</span></p>
+                           <p className = "navtext"><i className="material-icons">receipt_long</i><span className="nav-label">Events Share</span></p>
                         </Link>
                     </li>
                     <li className="nav-item">
