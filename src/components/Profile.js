@@ -10,9 +10,17 @@ export default function Profile(props) {
     const [userFoodInput, setUserFoodInput] = useState('');
 
     const [noteObj,setNoteObj] = useState({title:'title', content:'content'});
-    const cur = (formObj) => {
+    const [allNotes, setAllNotes] = useState(props.noteData);
+    const newNote = (formObj) => {
         setNoteObj(formObj);
+        let newNotes = [...allNotes, formObj];
+        setAllNotes(newNotes);
     }
+
+    // const addToAllNotes = (formObj) => {
+    //     let newNotes = [...allNotes, formObj];
+    //     setAllNotes(newNotes);
+    // }
 
     // handle name input and change
     function handleNameInput(evt) {
@@ -52,7 +60,7 @@ export default function Profile(props) {
 
     // Your Notes component (3rd column of the page)
     function YourNotes(props) {
-        const noteDataArr = props.noteData.map((note) => {
+        const noteDataArr = allNotes.map((note) => {
             return (
                 <div className="row" key={note.title}>
                     <div className="card my-2 p-3 rounded-0">
@@ -177,8 +185,8 @@ export default function Profile(props) {
                         </div>
                     </div>
 
-                    <AddNote getFormCallback={cur}/>
-                    <YourNotes noteData={props.noteData} />
+                    <AddNote newNote={newNote}/>
+                    <YourNotes />
                     
             </div>
             </div>

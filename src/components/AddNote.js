@@ -6,12 +6,14 @@ export function AddNote(props) {
 
     const handleTitle = (event) => {
         setTitle(event.target.value);
-        props.getFormCallback({title,content});
     }
 
     const handleContent = (event) => {
         setContent(event.target.value);
-        props.getFormCallback({title,content});
+    }
+    
+    const handleClick = (event) => {
+        props.newNote({title:title, content:content});
     }
 
 
@@ -42,7 +44,7 @@ export function AddNote(props) {
 
 
                 <div className="row-2 d-flex row">
-                    <button type="button" className="btn btn-dark my-2">
+                    <button type="button" className="btn btn-dark my-2" onClick = {handleClick}>
                         Add Note
                     </button>
                 </div>
