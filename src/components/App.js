@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Navbar, { navBot } from './Navbar.js';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Home.js';
 import Plan from './Plan.js';
 import Profile from './Profile.js';
 import Footer from './Footer.js';
+import SignInPage from './SigninPage.js';
 import POST_DATA from '../data/postData.json';
 import NOTE_DATA from '../data/noteData.json';
 import { getDatabase, onValue, ref, set as firebaseSet } from 'firebase/database';
@@ -97,6 +99,7 @@ export default function App(props) {
                 <Route path='/home' element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
                 <Route path='/plan' element={<Plan />} />
                 <Route path='/profile' element={<Profile userProfile={userProfile} noteData={NOTE_DATA} />} />
+                <Route path="signin" element={<SignInPage />} />
             </Routes>
             <Footer />
         </div>
