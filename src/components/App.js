@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Navbar, { navBot } from './Navbar.js';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import Navbar from './Navbar.js';
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { Routes, Route, Outlet, Navigate, useNavigate } from 'react-router-dom';
 import Home from './Home.js';
 import Plan from './Plan.js';
@@ -58,10 +58,16 @@ export default function App(props) {
         setPostData(postDataCopy);
     }
 
+    const handleSignOut = (event) => {
+        signOut(getAuth());
+        setCurrentUser({"uid": null, "userName": "Log Out"});
+      }  
+
     useEffect(() =>{
         const auth = getAuth();
         onAuthStateChanged(auth, (firebaseUser) => {
             if (firebaseUser) {
+                console.log('azzz');
                 setCurrentUser(firebaseUser);
             } else {
                 console.log("logged out");
@@ -96,7 +102,7 @@ export default function App(props) {
                 <Route element={<ProtectedPage currentUser={currentUser} />}>
                     <Route index element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
                     <Route path='home' element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
-                    <Route path='plan' element={<Plan currentUser={currentUser} />} />
+                    <Route path='plan' element={<Plan currentUser={currentUser} outback={handleSignOut}/>} />
                     <Route path='profile' element={<Profile userProfile={userProfile} noteData={NOTE_DATA} />} />        
                 </Route>
             </Routes>
@@ -106,6 +112,7 @@ export default function App(props) {
 }
 
 function ProtectedPage(props) {
+    console.log(props.currentUser.uid);
     if(props.currentUser.uid === null) { 
       return <Navigate to="/signin" />
     }
