@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import EventCard from "./EventCard";
-import { getDatabase, onValue, ref, set as firebaseSet } from 'firebase/database';
-import { updateCurrentUser } from "firebase/auth";
+import { getDatabase, ref, set as firebaseSet } from 'firebase/database';
 
 export default function Home(props) {
 
     const [postData,setPostData] = useState(props.postData);
-
-    const userDfRef = ref(getDatabase(), "userData/"+updateCurrentUser.userId+"events");
-
 
     const addCard = (title) => {
 
@@ -19,8 +15,8 @@ export default function Home(props) {
             const update = card;
             update[props.currentUser.uid] = true;
             return update;
-          })
-          setPostData(updateCards);
+        })
+        setPostData(updateCards);
         const db = getDatabase();
         const events = ref(db, 'Events');
         firebaseSet(events,updateCards);
@@ -34,8 +30,8 @@ export default function Home(props) {
             const update = card;
             delete update[props.currentUser.uid];
             return update;
-          })
-          setPostData(updateCards);
+        })
+        setPostData(updateCards);
         const db = getDatabase();
         const events = ref(db, 'Events');
         firebaseSet(events,updateCards);
@@ -58,7 +54,6 @@ export default function Home(props) {
     })
     return (
         <div className="react-body mt-4 mx-3">
-            {/* <h1>This is Home Page</h1> */}
             <div className="container-fluid mr-0">
                 <div className="row justify-content-around">
                     <div className="col-lg col-sm-12">
