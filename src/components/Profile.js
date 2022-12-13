@@ -50,6 +50,35 @@ export default function Profile(props) {
         setUserFoodInput('');
     }
 
+    // Your Notes component (3rd column of the page)
+    function YourNotes(props) {
+        const noteDataArr = props.noteData.map((note) => {
+            return (
+                <div className="row" key={note.title}>
+                    <div className="card my-2 p-3 rounded-0">
+                        <h3>{note.title}</h3>
+                        <p>{note.content}</p>
+                    </div>
+                </div>
+            );
+        });
+
+        return (
+            <div className="col-sm-12 col-lg-4 card-col">
+                <div className="card my-2 p-3 rounded-0">
+                    <div className="card-body">
+                        <h2>Your Notes</h2>
+                        <div className="container">
+                            {noteDataArr}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    
+
     return (
         <div className='react-body'>
 
@@ -72,13 +101,13 @@ export default function Profile(props) {
                                             <p>{userProfile.userName}</p>
                                         </dd>
                                         <div className='col-4'>
-                                            <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editName" aria-expanded="false" aria-controls="editName"><i class="material-icons">edit</i></button>
+                                            <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editName" aria-expanded="false" aria-controls="editName"><i className="material-icons">edit</i></button>
                                         </div>
                                         <div className="collapse" id="editName">
                                             <div className="input-group mb-3">
                                                 <input type="text" className="form-control" placeholder="Your new name" aria-label="Your new name" aria-describedby="basic-addon2" value={userNameInput} onChange={handleNameInput} />
-                                                <div class="input-group-append">
-                                                    <button className="btn btn-dark" type="button" onClick={handleNameChange} data-bs-toggle="collapse" data-bs-target="#editName"><i class="material-icons">done</i></button>
+                                                <div className="input-group-append">
+                                                    <button className="btn btn-dark" type="button" onClick={handleNameChange} data-bs-toggle="collapse" data-bs-target="#editName"><i className="material-icons">done</i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -92,13 +121,13 @@ export default function Profile(props) {
                                             <p>{userProfile.userLang}</p>
                                         </dd>
                                         <div className='col-4'>
-                                            <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editLang" aria-expanded="false" aria-controls="editLang"><i class="material-icons">edit</i></button>
+                                            <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editLang" aria-expanded="false" aria-controls="editLang"><i className="material-icons">edit</i></button>
                                         </div>
                                         <div className="collapse" id="editLang">
                                             <div className="input-group mb-3">
                                                 <input type="text" className="form-control" placeholder="Type your languages" aria-label="Type your languages" aria-describedby="basic-addon2" value={userLangInput} onChange={handleLangInput} />
-                                                <div class="input-group-append">
-                                                    <button className="btn btn-dark" type="button" onClick={handleLangChange} data-bs-toggle="collapse" data-bs-target="#editLang"><i class="material-icons">done</i></button>
+                                                <div className="input-group-append">
+                                                    <button className="btn btn-dark" type="button" onClick={handleLangChange} data-bs-toggle="collapse" data-bs-target="#editLang"><i className="material-icons">done</i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -112,13 +141,13 @@ export default function Profile(props) {
                                             <p>{userProfile.userPlaces}</p>
                                         </dd>
                                         <div className='col-4'>
-                                            <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editPlaces" aria-expanded="false" aria-controls="editPlaces"><i class="material-icons">edit</i></button>
+                                            <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editPlaces" aria-expanded="false" aria-controls="editPlaces"><i className="material-icons">edit</i></button>
                                         </div>
                                         <div className="collapse" id="editPlaces">
                                             <div className="input-group mb-3">
                                                 <input type="text" className="form-control" placeholder="Type your favortite places" aria-label="Type your favortite places" aria-describedby="basic-addon2" value={userPlacesInput} onChange={handlePlacesInput} />
-                                                <div class="input-group-append">
-                                                    <button className="btn btn-dark" type="button" onClick={handlePlacesChange} data-bs-toggle="collapse" data-bs-target="#editPlaces"><i class="material-icons">done</i></button>
+                                                <div className="input-group-append">
+                                                    <button className="btn btn-dark" type="button" onClick={handlePlacesChange} data-bs-toggle="collapse" data-bs-target="#editPlaces"><i className="material-icons">done</i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -132,13 +161,13 @@ export default function Profile(props) {
                                             <p>{userProfile.userFood}</p>
                                         </dd>
                                         <div className='col-4'>
-                                            <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editFood" aria-expanded="false" aria-controls="editFood"><i class="material-icons">edit</i></button>
+                                            <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editFood" aria-expanded="false" aria-controls="editFood"><i className="material-icons">edit</i></button>
                                         </div>
                                         <div className="collapse" id="editFood">
                                             <div className="input-group mb-3">
                                                 <input type="text" className="form-control" placeholder="Type your favortite foods" aria-label="Type your favortite foods" aria-describedby="basic-addon2" value={userFoodInput} onChange={handleFoodInput} />
-                                                <div class="input-group-append">
-                                                    <button className="btn btn-dark" type="button" onClick={handleFoodChange} data-bs-toggle="collapse" data-bs-target="#editFood"><i class="material-icons">done</i></button>
+                                                <div className="input-group-append">
+                                                    <button className="btn btn-dark" type="button" onClick={handleFoodChange} data-bs-toggle="collapse" data-bs-target="#editFood"><i className="material-icons">done</i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -149,31 +178,7 @@ export default function Profile(props) {
                     </div>
 
                     <AddNote getFormCallback={cur}/>
-                    <div className="col-sm-12 col-lg-4 card-col">
-                        <div className="card my-2 p-3 rounded-0">
-                            <div className="card-body">
-                                <h2>Notes</h2>
-                                <div className="container">
-        
-                                    <div className="row">
-                                        <div className="card my-2 p-3 rounded-0">
-                                            <h3>Things before Alaska</h3>
-                                            <p>A good fur coat, Alaska local sim card, Power bank ,Visit grandparents before leaving</p>
-                                        </div>
-                                    </div>
-        
-                                    <div className="row">
-                                        <div className="card my-2 p-3 rounded-0">
-                                            <h3>Marco</h3>
-                                            <p>
-                                                Marco said we should go to Mt. Rainier next weekend. Remember to ask uncle Bill to drive us there.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <YourNotes noteData={props.noteData} />
                     
             </div>
             </div>

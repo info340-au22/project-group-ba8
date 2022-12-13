@@ -31,12 +31,16 @@ export default function App(props) {
     const userProfile = {
         'userName': userName,
         'changeUserName': changeUserName,
+        'namePlaceholder': "Type your new name",
         'userLang': userLang,
         'changeUserLang': changeUserLang,
+        'langPlaceholder': "Type your languages",
         'userPlaces': userPlaces,
         'changeUserPlaces': changeUserPlaces,
+        'placesPlaceholder': "Type your favortite places",
         'userFood': userFood,
-        'changeUserFood': changeUserFood
+        'changeUserFood': changeUserFood,
+        'foodPlaceholder': "Type your favortite foods"
     };
     
     /*
@@ -92,7 +96,7 @@ export default function App(props) {
                 <Route index element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
                 <Route path='/home' element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
                 <Route path='/plan' element={<Plan />} />
-                <Route path='/profile' element={<Profile userProfile={userProfile} />} />
+                <Route path='/profile' element={<Profile userProfile={userProfile} noteData={NOTE_DATA} />} />
             </Routes>
             <Footer />
         </div>

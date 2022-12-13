@@ -18,7 +18,7 @@ export default function Plan(props) {
 
     return (
     <div className="react-body">
-        <div className="container">
+        <div className="container mt-4">
             <div className="row">
                 <Form getFormCallback={getForm}/>
                 <div className="d-none d-xl-block col-xl-4">

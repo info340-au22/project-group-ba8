@@ -19,7 +19,7 @@ export function AddNote(props) {
         <div className="col-sm-12 col-lg-4 card-col">
         <div className="card my-2 p-3 rounded-0">
         <div className="card-body">
-            <h2>Notes</h2>
+            <h2>Add Notes</h2>
             <div className="container">
 
                 <div className="row">
