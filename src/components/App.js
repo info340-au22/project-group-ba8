@@ -13,7 +13,7 @@ import { getDatabase, onValue, ref, set as firebaseSet } from 'firebase/database
 
 export default function App(props) {
 
-    const [currentUser, setCurrentUser] = useState({"userId": 'test', "userName": "Log Out"});
+    const [currentUser, setCurrentUser] = useState({"userId": null, "userName": "Log Out"});
     const navigateTo = useNavigate();
 
     // user profile default info, with functions to set new ones
@@ -58,6 +58,20 @@ export default function App(props) {
         setPostData(postDataCopy);
     }
 
+    useEffect(() =>{
+        const auth = getAuth();
+        onAuthStateChanged(auth, (firebaseUser) => {
+            if (firebaseUser) {
+                setCurrentUser(firebaseUser);
+            } else {
+                console.log("logged out");
+            }
+        })
+    })
+
+    
+
+
     useEffect(() => {
         const db = getDatabase();
         const events = ref(db, 'Events');
@@ -83,8 +97,7 @@ export default function App(props) {
                     <Route index element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
                     <Route path='home' element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
                     <Route path='plan' element={<Plan />} />
-                    <Route path='profile' element={<Profile userProfile={userProfile} noteData={NOTE_DATA} />} /> 
-                    <Route path="home" element={<Navigate to="/home" />} />        
+                    <Route path='profile' element={<Profile userProfile={userProfile} noteData={NOTE_DATA} />} />        
                 </Route>
             </Routes>
             <Footer />
