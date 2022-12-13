@@ -5,7 +5,7 @@ import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 export default function EventCard(props) {
     const evtObj = props.evtObj;
     const cardTitle = evtObj.title;
-    const isSaved = evtObj.isSaved;
+    const isSaved = props.isSaved;
     function titleCase(str) {
         str = str.toLowerCase();
         let wordArr = str.split(' ');

@@ -1,37 +1,52 @@
 import React, { useState } from "react";
 import EventCard from "./EventCard";
+import { getDatabase, onValue, ref, set as firebaseSet } from 'firebase/database';
+import { updateCurrentUser } from "firebase/auth";
 
 export default function Home(props) {
 
     const [postData,setPostData] = useState(props.postData);
 
+    const userDfRef = ref(getDatabase(), "userData/"+updateCurrentUser.userId+"events");
 
-    const changeCard = (title) => {
+
+    const addCard = (title) => {
 
         const updateCards = postData.map((card) => {
             if (card.title !== title) {
               return card;
             }
             const update = card;
-            update.isSaved = !update.isSaved;
+            update[props.currentUser.uid] = true;
             return update;
           })
           setPostData(updateCards);
     }
 
+    const removeCard = (title) => {
+        const updateCards = postData.map((card) => {
+            if (card.title !== title) {
+              return card;
+            }
+            const update = card;
+            delete update[props.currentUser.uid];
+            return update;
+          })
+          setPostData(updateCards);
+    }
     
     const publicPosts = props.postData.map((post) => {
         
-        if (!post.isSaved){
+        if (!post[props.currentUser.uid]){
             return (
-                <EventCard evtObj={post} isSaved={post.isSaved} key={post.id} evtBtnCallbk={changeCard}/>
+                <EventCard evtObj={post} isSaved={false} key={post.id} evtBtnCallbk={addCard}/>
             )
         }
     })
     const savedPosts = props.postData.map((post) => {
-        if (post.isSaved){
+        if (post[props.currentUser.uid]){
             return (
-                <EventCard evtObj={post} isSaved={post.isSaved} key={post.id} evtBtnCallbk={changeCard} />
+                <EventCard evtObj={post} isSaved={true} key={post.id} evtBtnCallbk={removeCard} />
             )
         }
     })
