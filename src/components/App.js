@@ -36,16 +36,12 @@ export default function App(props) {
     const userProfile = {
         'userName': userName,
         'changeUserName': changeUserName,
-        'namePlaceholder': "Type your new name",
         'userLang': userLang,
         'changeUserLang': changeUserLang,
-        'langPlaceholder': "Type your languages",
         'userPlaces': userPlaces,
         'changeUserPlaces': changeUserPlaces,
-        'placesPlaceholder': "Type your favortite places",
         'userFood': userFood,
         'changeUserFood': changeUserFood,
-        'foodPlaceholder': "Type your favortite foods"
     };
     
     /*

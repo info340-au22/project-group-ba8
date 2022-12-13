@@ -28,7 +28,7 @@ export function AddNote(props) {
                     <div className="card my-2 p-3 rounded-0">
                         <h3>
                             <input type="text" className="form-control" id="title-input" 
-                            placeholder="Add A Note~" value={title} onChange={handleTitle} required />
+                            placeholder="Add a title for your note" value={title} onChange={handleTitle} required />
                         </h3>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ export function AddNote(props) {
                     <div className="card my-2 p-3 rounded-0">
                         <h3>
                             <textarea type="text" className="form-control" id="content-input" 
-                            placeholder="hmmm..." value={content} onChange={handleContent} required />
+                            placeholder="Put some content" value={content} onChange={handleContent} required />
                         </h3>
                     </div>
                 </div>

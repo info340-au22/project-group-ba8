@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import {AddNote} from "./AddNote";
+
 import {Example} from "./Popup";
 import Button from 'react-bootstrap/Button';
 import Note from './NoteCard';
+
+import { EditProfile } from "./Popup";
+
+
 export default function Profile(props) {
     const userProfile = props.userProfile;
 
@@ -97,9 +102,9 @@ export default function Profile(props) {
                         <div className="card my-2 p-3 rounded-0">
                             <div className="card-body">
 
-                            <Example show = {changeInfo} onHide = {() => setChangeInfo(false)} />
+                            
 
-                                <h2 className="personalPicture">Personal Info</h2>
+                                <h2 className="personalPicture">Personal Info <EditProfile show = {changeInfo} onHide = {() => setChangeInfo(false)} /></h2>
                                 <img className="avatar my-3" label="avatar" src="img/beaver.jpg" alt="your user avatar" />
                                 <dl className="my-2">
                                     <div className="row-2 d-flex row mb-3">
@@ -109,17 +114,6 @@ export default function Profile(props) {
                                         <dd className="col">
                                             <p>{userProfile.userName}</p>
                                         </dd>
-                                        <div className='col-4'>
-                                            <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editName" aria-expanded="false" aria-controls="editName"><i className="material-icons">edit</i></button>
-                                        </div>
-                                        <div className="collapse" id="editName">
-                                            <div className="input-group mb-3">
-                                                <input type="text" className="form-control" placeholder="Your new name" aria-label="Your new name" aria-describedby="basic-addon2" value={userNameInput} onChange={handleNameInput} />
-                                                <div className="input-group-append">
-                                                    <button className="btn btn-dark" type="button" onClick={handleNameChange} data-bs-toggle="collapse" data-bs-target="#editName"><i className="material-icons">done</i></button>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     <div className="row-2 d-flex row mb-3">
@@ -129,17 +123,6 @@ export default function Profile(props) {
                                         <dd className="col">
                                             <p>{userProfile.userLang}</p>
                                         </dd>
-                                        <div className='col-4'>
-                                            <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editLang" aria-expanded="false" aria-controls="editLang"><i className="material-icons">edit</i></button>
-                                        </div>
-                                        <div className="collapse" id="editLang">
-                                            <div className="input-group mb-3">
-                                                <input type="text" className="form-control" placeholder="Type your languages" aria-label="Type your languages" aria-describedby="basic-addon2" value={userLangInput} onChange={handleLangInput} />
-                                                <div className="input-group-append">
-                                                    <button className="btn btn-dark" type="button" onClick={handleLangChange} data-bs-toggle="collapse" data-bs-target="#editLang"><i className="material-icons">done</i></button>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     <div className="row-2 d-flex row mb-3">
@@ -149,17 +132,6 @@ export default function Profile(props) {
                                         <dd className="col">
                                             <p>{userProfile.userPlaces}</p>
                                         </dd>
-                                        <div className='col-4'>
-                                            <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editPlaces" aria-expanded="false" aria-controls="editPlaces"><i className="material-icons">edit</i></button>
-                                        </div>
-                                        <div className="collapse" id="editPlaces">
-                                            <div className="input-group mb-3">
-                                                <input type="text" className="form-control" placeholder="Type your favortite places" aria-label="Type your favortite places" aria-describedby="basic-addon2" value={userPlacesInput} onChange={handlePlacesInput} />
-                                                <div className="input-group-append">
-                                                    <button className="btn btn-dark" type="button" onClick={handlePlacesChange} data-bs-toggle="collapse" data-bs-target="#editPlaces"><i className="material-icons">done</i></button>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     <div className="row-2 d-flex row mb-3">
@@ -169,7 +141,7 @@ export default function Profile(props) {
                                         <dd className="col">
                                             <p>{userProfile.userFood}</p>
                                         </dd>
-                                        <div className='col-4'>
+                                        {/* <div className='col-4'>
                                             <button type="button" className='btn btn-outline-dark' data-bs-toggle="collapse" data-bs-target="#editFood" aria-expanded="false" aria-controls="editFood"><i className="material-icons">edit</i></button>
                                         </div>
                                         <div className="collapse" id="editFood">
@@ -179,7 +151,7 @@ export default function Profile(props) {
                                                     <button className="btn btn-dark" type="button" onClick={handleFoodChange} data-bs-toggle="collapse" data-bs-target="#editFood"><i className="material-icons">done</i></button>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </dl>
                             </div>
