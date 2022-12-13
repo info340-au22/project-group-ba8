@@ -126,6 +126,11 @@ label, .btn, h1{
     max-width: 50px;
 }
 
+.required-field::after {
+    content: "*";
+    color: red;
+}
+
 .personal-term {
     margin-bottom: .5em;
 }

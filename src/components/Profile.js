@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import {AddNote} from "./AddNote";
+
+import {Example} from "./Popup";
+import Button from 'react-bootstrap/Button';
+import Note from './NoteCard';
+
 import { EditProfile } from "./Popup";
+
 
 export default function Profile(props) {
     const userProfile = props.userProfile;
@@ -65,12 +71,7 @@ export default function Profile(props) {
     function YourNotes(props) {
         const noteDataArr = allNotes.map((note) => {
             return (
-                <div className="row" key={note.title}>
-                    <div className="card my-2 p-3 rounded-0">
-                        <h3>{note.title}</h3>
-                        <p>{note.content}</p>
-                    </div>
-                </div>
+                <Note title = {note.title} content = {note.content} key = {note.title}/>
             );
         });
 
