@@ -17,21 +17,30 @@ export default function App(props) {
     const navigateTo = useNavigate();
 
     // user profile default info, with functions to set new ones
-    const [userName, setUserName] = useState('Beaver B. Beaver');
+    const [userName, setUserName] =  useState('Beaver B. Beaver');
     const [userLang, setUserLang] = useState('English, French, Beaverish');
     const [userPlaces, setUserPlaces] = useState('Rivers, Forests, Woodcraft Fairs');
     const [userFood, setUserFood] = useState('Flowers, Berries, Fish');
+
     function changeUserName(str) {
         setUserName(str);
+        const userDbRef =ref(getDatabase(), "userData/"+currentUser.uid+"/profile/name");
+        firebaseSet(userDbRef,str);
     }
     function changeUserLang(str) {
         setUserLang(str);
+        const userDbRef =ref(getDatabase(), "userData/"+currentUser.uid+"/profile/lang");
+        firebaseSet(userDbRef,str);
     }
     function changeUserPlaces(str) {
         setUserPlaces(str);
+        const userDbRef =ref(getDatabase(), "userData/"+currentUser.uid+"/profile/places");
+        firebaseSet(userDbRef,str);
     }
     function changeUserFood(str) {
         setUserFood(str);
+        const userDbRef =ref(getDatabase(), "userData/"+currentUser.uid+"/profile/food");
+        firebaseSet(userDbRef,str);
     }
     const userProfile = {
         'userName': userName,
