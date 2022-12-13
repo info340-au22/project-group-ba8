@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar, { navBot } from './Navbar.js';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet, Navigate, useNavigate } from 'react-router-dom';
 import Home from './Home.js';
 import Plan from './Plan.js';
 import Profile from './Profile.js';
@@ -12,6 +12,9 @@ import NOTE_DATA from '../data/noteData.json';
 import { getDatabase, onValue, ref, set as firebaseSet } from 'firebase/database';
 
 export default function App(props) {
+
+    const [currentUser, setCurrentUser] = useState({"userId": 'test', "userName": "Log Out"});
+    const navigateTo = useNavigate();
 
     // user profile default info, with functions to set new ones
     const [userName, setUserName] = useState('Beaver B. Beaver');
@@ -65,43 +68,35 @@ export default function App(props) {
             const changedEvents = objkeys.map((keyString) =>{
                 const obj = changedValue[keyString];
                 obj.id= keyString;
-            
-
                 return obj;
-
-
             })
-
-
-
-
-            
             setPostData(changedEvents);
-            
-
         })
-
     },[]);
-
-
-
-
-
-
-
-
 
     return (
         <div className='the-app'>
             <Navbar />
             <Routes>
-                <Route index element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
-                <Route path='/home' element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
-                <Route path='/plan' element={<Plan />} />
-                <Route path='/profile' element={<Profile userProfile={userProfile} noteData={NOTE_DATA} />} />
                 <Route path="signin" element={<SignInPage />} />
+                <Route element={<ProtectedPage currentUser={currentUser} />}>
+                    <Route index element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
+                    <Route path='home' element={<Home postData={postData} evtBtnCallbk={evtBtnCallbk} />} />
+                    <Route path='plan' element={<Plan />} />
+                    <Route path='profile' element={<Profile userProfile={userProfile} noteData={NOTE_DATA} />} /> 
+                    <Route path="home" element={<Navigate to="/home" />} />        
+                </Route>
             </Routes>
             <Footer />
         </div>
     );
 }
+
+function ProtectedPage(props) {
+    if(props.currentUser.userId === null) { 
+      return <Navigate to="/signin" />
+    }
+    else { 
+      return <Outlet />
+    }
+  }
